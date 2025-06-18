@@ -1,8 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
-import { SiJava } from "react-icons/si";
-import { Brain, Award, Bot } from "lucide-react";
+import { ExternalLink, Brain, Award, Bot, Coffee } from "lucide-react";
 
 const CertificationsSection = () => {
   const certifications = [
@@ -11,7 +9,7 @@ const CertificationsSection = () => {
       organization: "NPTEL",
       description: "Comprehensive Java programming course covering core concepts and advanced topics",
       year: "2023",
-      icon: SiJava,
+      icon: Coffee,
       color: "bg-orange-500",
       orgColor: "text-orange-500",
     },
@@ -29,7 +27,7 @@ const CertificationsSection = () => {
       organization: "Infosys Springboard",
       description: "Foundation-level Java programming and software development principles",
       year: "2023",
-      icon: SiJava,
+      icon: Coffee,
       color: "bg-green-500",
       orgColor: "text-green-500",
     },
