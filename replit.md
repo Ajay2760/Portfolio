@@ -120,6 +120,15 @@ Changelog:
   - Updated Machine Learning certificate to IIIT Hyderabad
   - Added Design & Implementation of Human-Computer Interfaces (NPTEL 2024) with 63 score
   - Implemented PDF certificate viewing functionality with actual certificate files
+- June 18, 2025. Connected Google Drive certificate links:
+  - Updated all certificate "View Certificate" buttons to open Google Drive links
+  - Programming in Java: https://drive.google.com/file/d/1FcMQcxAD2wL-46YnuqsSfeDXmt7NzrV-/view?usp=sharing
+  - Machine Learning (IIT Allahabad): https://drive.google.com/file/d/1FcMQcxAD2wL-46YnuqsSfeDXmt7NzrV-/view?usp=drive_link
+  - Ethics in Generative AI: https://drive.google.com/file/d/1J9gSqwKI5l6wrz6WrFvxExnlMhvSOQ3V/view?usp=sharing
+  - Human-Computer Interfaces: https://drive.google.com/file/d/1J9gSqwKI5l6wrz6WrFvxExnlMhvSOQ3V/view?usp=sharing
+- June 18, 2025. Updated project images:
+  - Changed Pro Planet carbon footprint calculator project image to more relevant environmental/sustainability themed image
+  - Updated about section profile photo with professional headshot
 
 ## User Preferences
 
