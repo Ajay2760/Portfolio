@@ -12,17 +12,17 @@ const CertificationsSection = () => {
       icon: Coffee,
       color: "bg-orange-500",
       orgColor: "text-orange-500",
-      certificateUrl: "/assets/Programming In Java_1750242185939.pdf",
+      certificateUrl: "https://drive.google.com/file/d/1FcMQcxAD2wL-46YnuqsSfeDXmt7NzrV-/view?usp=sharing",
     },
     {
       title: "Machine Learning",
-      organization: "IIIT Hyderabad",
+      organization: "IIT Allahabad",
       description: "Machine learning fundamentals and applications completed in May-June 2023",
       year: "2023",
       icon: Brain,
       color: "bg-blue-500",
       orgColor: "text-blue-500",
-      certificateUrl: "/assets/Ajay_R_Download_IIIT_Certificate_Association_Certificate_Universal_1750242284462.pdf",
+      certificateUrl: "https://drive.google.com/file/d/1FcMQcxAD2wL-46YnuqsSfeDXmt7NzrV-/view?usp=drive_link",
     },
     {
       title: "Ethics in the Age of Generative AI",
@@ -32,7 +32,7 @@ const CertificationsSection = () => {
       icon: Bot,
       color: "bg-green-500",
       orgColor: "text-green-500",
-      certificateUrl: "/assets/CertificateOfCompletion_Ethics in the Age of Generative AI_1750242206879.pdf",
+      certificateUrl: "https://drive.google.com/file/d/1J9gSqwKI5l6wrz6WrFvxExnlMhvSOQ3V/view?usp=sharing",
     },
     {
       title: "Design & Implementation of Human-Computer Interfaces",
@@ -42,7 +42,7 @@ const CertificationsSection = () => {
       icon: Award,
       color: "bg-purple-500",
       orgColor: "text-purple-500",
-      certificateUrl: "/assets/Design & Implementation of Human-Computer Interfaces (1)_1750242295712.pdf",
+      certificateUrl: "https://drive.google.com/file/d/1J9gSqwKI5l6wrz6WrFvxExnlMhvSOQ3V/view?usp=sharing",
     },
   ];
 

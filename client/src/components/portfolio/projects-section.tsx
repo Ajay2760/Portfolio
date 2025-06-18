@@ -8,7 +8,7 @@ const ProjectsSection = () => {
     {
       title: "Pro Planet: Carbon Footprint Calculator",
       description: "Developed a comprehensive mobile application prototype that calculates users' carbon emissions based on their daily habits and lifestyle choices.",
-      image: "https://images.unsplash.com/photo-1569163139394-de44cb85b99a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      image: "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       features: [
         "Personalized carbon footprint tracking",
         "AI-powered reduction recommendations",
