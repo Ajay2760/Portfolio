@@ -113,6 +113,13 @@ contacts: {
 
 Changelog:
 - June 18, 2025. Initial setup
+- June 18, 2025. Updated certifications section with authentic certificates:
+  - Removed Infosys Java Foundation certificate
+  - Added Programming in Java (NPTEL 2024) with 56 score
+  - Added Ethics in the Age of Generative AI (LinkedIn Learning 2023)
+  - Updated Machine Learning certificate to IIIT Hyderabad
+  - Added Design & Implementation of Human-Computer Interfaces (NPTEL 2024) with 63 score
+  - Implemented PDF certificate viewing functionality with actual certificate files
 
 ## User Preferences
 

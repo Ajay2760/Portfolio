@@ -5,45 +5,49 @@ import { ExternalLink, Brain, Award, Bot, Coffee } from "lucide-react";
 const CertificationsSection = () => {
   const certifications = [
     {
-      title: "Java Programming",
+      title: "Programming in Java",
       organization: "NPTEL",
-      description: "Comprehensive Java programming course covering core concepts and advanced topics",
-      year: "2023",
+      description: "12-week comprehensive Java programming course with 56 score and 3-4 credit hours",
+      year: "2024",
       icon: Coffee,
       color: "bg-orange-500",
       orgColor: "text-orange-500",
+      certificateUrl: "/assets/Programming In Java_1750242185939.pdf",
     },
     {
       title: "Machine Learning",
-      organization: "IIT Allahabad",
-      description: "Online certification in machine learning fundamentals and applications",
+      organization: "IIIT Hyderabad",
+      description: "Machine learning fundamentals and applications completed in May-June 2023",
       year: "2023",
       icon: Brain,
       color: "bg-blue-500",
       orgColor: "text-blue-500",
+      certificateUrl: "/assets/Ajay_R_Download_IIIT_Certificate_Association_Certificate_Universal_1750242284462.pdf",
     },
     {
-      title: "Java Foundation",
-      organization: "Infosys Springboard",
-      description: "Foundation-level Java programming and software development principles",
-      year: "2023",
-      icon: Coffee,
-      color: "bg-green-500",
-      orgColor: "text-green-500",
-    },
-    {
-      title: "AI Foundations",
-      organization: "Infosys Springboard",
-      description: "Foundational concepts in artificial intelligence and its applications",
+      title: "Ethics in the Age of Generative AI",
+      organization: "LinkedIn Learning",
+      description: "38-minute course covering computer ethics and generative AI principles",
       year: "2023",
       icon: Bot,
+      color: "bg-green-500",
+      orgColor: "text-green-500",
+      certificateUrl: "/assets/CertificateOfCompletion_Ethics in the Age of Generative AI_1750242206879.pdf",
+    },
+    {
+      title: "Design & Implementation of Human-Computer Interfaces",
+      organization: "NPTEL",
+      description: "12-week course on HCI design with 63 score and 3-4 credit hours",
+      year: "2024",
+      icon: Award,
       color: "bg-purple-500",
       orgColor: "text-purple-500",
+      certificateUrl: "/assets/Design & Implementation of Human-Computer Interfaces (1)_1750242295712.pdf",
     },
   ];
 
-  const handleViewCertificate = (title: string) => {
-    alert(`Certificate viewing functionality for "${title}" would be implemented with actual certificate links.`);
+  const handleViewCertificate = (certificateUrl: string) => {
+    window.open(certificateUrl, '_blank');
   };
 
   return (
@@ -73,7 +77,7 @@ const CertificationsSection = () => {
                     <Button 
                       variant="outline" 
                       size="sm"
-                      onClick={() => handleViewCertificate(cert.title)}
+                      onClick={() => handleViewCertificate(cert.certificateUrl)}
                       className="text-primary hover:text-primary"
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
