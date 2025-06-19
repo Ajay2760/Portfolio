@@ -4,7 +4,7 @@ import { Mail, Download } from "lucide-react";
 
 const HeroSection = () => {
   const [displayText, setDisplayText] = useState("");
-  const fullText = "Full Stack Developer & Tech Enthusiast";
+  const fullText = "Web Developer & Tech Enthusiast";
 
   useEffect(() => {
     let index = 0;

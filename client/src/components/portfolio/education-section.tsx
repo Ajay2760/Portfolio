@@ -7,9 +7,9 @@ const EducationSection = () => {
       title: "Bachelor of Information Technology",
       institution: "Sri Venkateswara College of Engineering",
       grade: "CGPA: 7.4/10",
-      status: "Current",
+      status: "Completed",
       icon: GraduationCap,
-      color: "bg-primary",
+      color: "bg-green-500",
     },
     {
       title: "Higher Secondary Certificate (HSC)",

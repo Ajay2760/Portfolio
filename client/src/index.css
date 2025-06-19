@@ -95,6 +95,78 @@
   .project-card:hover {
     transform: translateY(-8px);
   }
+
+  /* Page transition animations */
+  .page-transition {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .page-enter {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  .page-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .page-exit {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .page-exit-active {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  /* Skill progress bar animations */
+  .skill-progress {
+    width: 0%;
+    height: 8px;
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--primary)) 70%, hsl(var(--accent)));
+    border-radius: 4px;
+    transition: width 2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: shimmer 2s infinite;
+  }
+
+  .skill-progress.animate {
+    animation: progressFill 2s ease-in-out forwards;
+  }
+
+  /* Staggered animations for sections */
+  .stagger-animation {
+    animation-delay: 0.1s;
+  }
+
+  .stagger-animation:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .stagger-animation:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+
+  .stagger-animation:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+
+  .stagger-animation:nth-child(5) {
+    animation-delay: 0.5s;
+  }
 }
 
 @keyframes typing {
@@ -105,4 +177,14 @@
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: currentColor }
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+@keyframes progressFill {
+  0% { width: 0%; }
+  100% { width: var(--progress-width); }
 }

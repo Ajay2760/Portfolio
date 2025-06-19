@@ -2,8 +2,29 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Code, Server, Database, Wrench, Cloud } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const SkillsSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const skillCategories = [
     {
       title: "Frontend Development",
@@ -55,7 +76,7 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-card">
+    <section id="skills" className="py-20 bg-card" ref={sectionRef}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="fade-in">
           <div className="text-center mb-16">
@@ -65,7 +86,7 @@ const SkillsSection = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skillCategories.map((category, index) => (
-              <Card key={index} className="bg-muted/30 shadow-lg">
+              <Card key={index} className="bg-muted/30 shadow-lg stagger-animation fade-in visible">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold mb-4 flex items-center">
                     <category.icon className={`${category.color} mr-3 h-5 w-5`} />
@@ -78,7 +99,15 @@ const SkillsSection = () => {
                           <span className="text-sm font-medium">{skill.name}</span>
                           <span className="text-sm text-muted-foreground">{skill.level}%</span>
                         </div>
-                        <Progress value={skill.level} className="h-2" />
+                        <div className="bg-muted rounded-full h-2">
+                          <div 
+                            className="skill-progress rounded-full"
+                            style={{
+                              width: isVisible ? `${skill.level}%` : '0%',
+                              '--progress-width': `${skill.level}%`
+                            } as React.CSSProperties}
+                          />
+                        </div>
                       </div>
                     ))}
                   </div>

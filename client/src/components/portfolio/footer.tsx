@@ -1,6 +1,7 @@
 import { Heart, Computer } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Instagram } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,7 +14,16 @@ const Footer = () => {
   };
 
   const handleSocialClick = (platform: string) => {
-    alert(`${platform} profile link would be implemented in a real portfolio.`);
+    const socialUrls: { [key: string]: string } = {
+      'GitHub': 'https://github.com/Ajay2760',
+      'LinkedIn': 'https://www.linkedin.com/in/ajayr1234/',
+      'X': 'https://x.com/Ajay_0157',
+      'Instagram': 'https://www.instagram.com/_ajay._.17_'
+    };
+    
+    if (socialUrls[platform]) {
+      window.open(socialUrls[platform], '_blank');
+    }
   };
 
   const quickLinks = [
@@ -26,7 +36,8 @@ const Footer = () => {
   const socialLinks = [
     { icon: Github, label: "GitHub" },
     { icon: Linkedin, label: "LinkedIn" },
-    { icon: Twitter, label: "Twitter" },
+    { icon: FaXTwitter, label: "X" },
+    { icon: Instagram, label: "Instagram" },
   ];
 
   const clubsAndSocieties = [

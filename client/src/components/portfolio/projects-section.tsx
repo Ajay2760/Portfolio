@@ -42,8 +42,20 @@ const ProjectsSection = () => {
     },
   ];
 
-  const handleProjectAction = (action: string, projectTitle: string) => {
-    alert(`${action} for "${projectTitle}" would be implemented with actual links in a real portfolio.`);
+  const handleProjectAction = (action: string, project: any) => {
+    if (project.title.includes("Pro Planet")) {
+      if (action === "View Code") {
+        window.open("https://github.com/Ajay2760/Carbon-footprint-calculator", "_blank");
+      } else if (action === "Live Demo") {
+        window.open("https://carbonfootprintcalculator0.netlify.app/", "_blank");
+      }
+    } else if (project.title.includes("Connect")) {
+      if (action === "View Code") {
+        window.open("https://github.com/Ajay2760/Connect", "_blank");
+      } else if (action === "Live Demo") {
+        window.open("https://connect-fpzv.onrender.com/", "_blank");
+      }
+    }
   };
 
   return (
@@ -86,7 +98,7 @@ const ProjectsSection = () => {
                     <Button 
                       variant="outline" 
                       size="sm"
-                      onClick={() => handleProjectAction("View Code", project.title)}
+                      onClick={() => handleProjectAction("View Code", project)}
                       className="text-primary hover:text-primary"
                     >
                       <Github className="mr-2 h-4 w-4" />
@@ -95,7 +107,7 @@ const ProjectsSection = () => {
                     <Button 
                       variant="outline" 
                       size="sm"
-                      onClick={() => handleProjectAction("Live Demo", project.title)}
+                      onClick={() => handleProjectAction("Live Demo", project)}
                       className="text-accent hover:text-accent"
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
