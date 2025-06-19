@@ -20,7 +20,7 @@ const AboutSection = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src={profilePhoto}
+                src="/assets/profile-photo.jpg"
                 alt="Ajay R - Professional Developer"
                 className="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
               />
