@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const AboutSection = () => {
   const details = [
@@ -19,7 +20,7 @@ const AboutSection = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="/assets/profile-photo.jpg"
+                src={profilePhoto}
                 alt="Ajay R - Professional Developer"
                 className="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
               />
