@@ -7,7 +7,8 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
 
 interface ContactFormData {
   name: string;
@@ -83,14 +84,14 @@ const ContactSection = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Github, href: "https://github.com/Ajay2760", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/ajayr1234/", label: "LinkedIn" },
+    { icon: FaXTwitter, href: "https://x.com/Ajay_0157", label: "X" },
+    { icon: Instagram, href: "https://www.instagram.com/_ajay._.17_", label: "Instagram" },
   ];
 
-  const handleSocialClick = (platform: string) => {
-    alert(`${platform} profile link would be implemented in a real portfolio.`);
+  const handleSocialClick = (href: string) => {
+    window.open(href, '_blank');
   };
 
   return (
@@ -130,7 +131,7 @@ const ContactSection = () => {
                       key={index}
                       variant="outline"
                       size="icon"
-                      onClick={() => handleSocialClick(social.label)}
+                      onClick={() => handleSocialClick(social.href)}
                       className="hover:bg-primary hover:text-white transition-colors"
                     >
                       <social.icon className="h-4 w-4" />
