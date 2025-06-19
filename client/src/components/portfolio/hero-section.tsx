@@ -27,8 +27,12 @@ const HeroSection = () => {
   };
 
   const handleDownloadResume = () => {
-    // In a real implementation, this would download the actual resume
-    alert("Resume download functionality would be implemented here with the actual PDF file.");
+    const link = document.createElement('a');
+    link.href = '/assets/resume.pdf';
+    link.download = 'Ajay_R_Web_Developer_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (

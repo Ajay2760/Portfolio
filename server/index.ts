@@ -57,6 +57,8 @@ app.use((req, res, next) => {
     await setupVite(app, server);
   } else {
     serveStatic(app);
+    // Also serve public assets in production
+    app.use(express.static("public"));
   }
 
   // ALWAYS serve the app on port 5000
