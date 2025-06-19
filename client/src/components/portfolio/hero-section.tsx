@@ -27,16 +27,19 @@ const HeroSection = () => {
   };
 
   const handleDownloadResume = () => {
-    const link = document.createElement('a');
-    link.href = '/assets/resume.pdf';
-    link.download = 'Ajay_R_Web_Developer_Resume.pdf';
-    document.body.appendChild(link);
+    const link = document.createElement("a");
+    link.href =
+      "https://drive.google.com/uc?export=download&id=1eR1pV6kD8vRrvn_Exkn2Fd7eC5oJNJvC";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
     link.click();
-    document.body.removeChild(link);
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/5 dark:to-accent/5">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/5 dark:to-accent/5"
+    >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="fade-in visible">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -46,14 +49,26 @@ const HeroSection = () => {
             <span className="typing-animation">{displayText}</span>
           </div>
           <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed text-muted-foreground">
-            Aspiring Web Developer with hands-on experience in building responsive web applications using modern technologies. Passionate about creating user-friendly experiences with performance and scalability in mind.
+            Aspiring Web Developer with hands-on experience in building
+            responsive web applications using modern technologies. Passionate
+            about creating user-friendly experiences with performance and
+            scalability in mind.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button onClick={scrollToContact} size="lg" className="bg-primary hover:bg-primary/90">
+            <Button
+              onClick={scrollToContact}
+              size="lg"
+              className="bg-primary hover:bg-primary/90"
+            >
               <Mail className="mr-2 h-4 w-4" />
               Get In Touch
             </Button>
-            <Button onClick={handleDownloadResume} variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white">
+            <Button
+              onClick={handleDownloadResume}
+              variant="outline"
+              size="lg"
+              className="border-primary text-primary hover:bg-primary hover:text-white"
+            >
               <Download className="mr-2 h-4 w-4" />
               Download Resume
             </Button>
