@@ -1,4 +1,3 @@
-import { Heart, Computer } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Instagram } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
@@ -40,25 +39,12 @@ const Footer = () => {
     { icon: Instagram, label: "Instagram" },
   ];
 
-  const clubsAndSocieties = [
-    {
-      name: "Youth Red Cross",
-      period: "2021 – Present",
-      icon: Heart,
-      color: "text-red-500",
-    },
-    {
-      name: "CSI - Computer Society of India",
-      period: "2021 – Present",
-      icon: Computer,
-      color: "text-blue-500",
-    },
-  ];
+
 
   return (
     <footer className="bg-slate-900 dark:bg-slate-950 text-slate-300 py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-xl font-bold text-white mb-4">Ajay R</h3>
             <p className="mb-4">
@@ -95,20 +81,7 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Clubs & Societies</h4>
-            <ul className="space-y-2 text-sm">
-              {clubsAndSocieties.map((club, index) => (
-                <li key={index} className="flex items-start space-x-2">
-                  <club.icon className={`${club.color} mt-0.5 h-4 w-4 flex-shrink-0`} />
-                  <div>
-                    <div className="font-medium">{club.name}</div>
-                    <div className="text-slate-400">{club.period}</div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
+
         </div>
         
         <div className="border-t border-slate-700 mt-8 pt-8 text-center">
