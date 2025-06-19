@@ -129,6 +129,16 @@ Changelog:
 - June 18, 2025. Updated project images:
   - Changed Pro Planet carbon footprint calculator project image to more relevant environmental/sustainability themed image
   - Updated about section profile photo with professional headshot
+- June 19, 2025. Major portfolio enhancements and cleanup:
+  - Changed hero title from "Full Stack Developer" to "Web Developer"
+  - Updated education status to "Completed" with green indicators for all degrees
+  - Added functional project links (GitHub repos and live demos for Pro Planet and Connect apps)
+  - Updated certification descriptions and Google Drive links with correct URLs
+  - Changed Twitter to X logo and implemented working social media links
+  - Added resume download functionality with actual PDF file
+  - Removed clubs and societies section from footer
+  - Cleaned up all unused certificate PDFs, images, and duplicate resume files
+  - Optimized file structure: only profile-photo.jpg and resume.pdf remain in public/assets
 
 ## User Preferences
 
