@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import profilePhoto from "@/assets/profile-photo.jpg";
 
 const AboutSection = () => {
   const details = [
