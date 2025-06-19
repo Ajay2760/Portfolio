@@ -7,7 +7,15 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Github,
+  Linkedin,
+  Instagram,
+} from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
 
 interface ContactFormData {
@@ -47,14 +55,21 @@ const ContactSection = () => {
     },
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.subject ||
+      !formData.message
+    ) {
       toast({
         title: "Missing Information",
         description: "Please fill in all fields.",
@@ -85,13 +100,21 @@ const ContactSection = () => {
 
   const socialLinks = [
     { icon: Github, href: "https://github.com/Ajay2760", label: "GitHub" },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/ajayr1234/", label: "LinkedIn" },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/ajayr1234/",
+      label: "LinkedIn",
+    },
     { icon: FaXTwitter, href: "https://x.com/Ajay_0157", label: "X" },
-    { icon: Instagram, href: "https://www.instagram.com/_ajay._.17_", label: "Instagram" },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/_ajay._.17_",
+      label: "Instagram",
+    },
   ];
 
   const handleSocialClick = (href: string) => {
-    window.open(href, '_blank');
+    window.open(href, "_blank");
   };
 
   return (
@@ -99,13 +122,17 @@ const ContactSection = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="fade-in">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Get In Touch
+            </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hello, feel free to reach out!
+              I'm always interested in new opportunities and exciting projects.
+              Whether you have a question or just want to say hola, feel free to
+              reach out!
             </p>
           </div>
-          
+
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h3 className="text-2xl font-semibold mb-8">Let's Connect</h3>
@@ -122,7 +149,7 @@ const ContactSection = () => {
                   </div>
                 ))}
               </div>
-              
+
               <div className="mt-8">
                 <h4 className="font-medium mb-4">Follow Me</h4>
                 <div className="flex space-x-4">
@@ -140,10 +167,12 @@ const ContactSection = () => {
                 </div>
               </div>
             </div>
-            
+
             <Card className="bg-muted/30">
               <CardContent className="p-8">
-                <h3 className="text-xl font-semibold mb-6">Send me a message</h3>
+                <h3 className="text-xl font-semibold mb-6">
+                  Send me a message
+                </h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <Label htmlFor="name">Name</Label>
@@ -191,8 +220,8 @@ const ContactSection = () => {
                       className="mt-2 resize-none"
                     />
                   </div>
-                  <Button 
-                    type="submit" 
+                  <Button
+                    type="submit"
                     className="w-full bg-primary hover:bg-primary/90"
                     disabled={contactMutation.isPending}
                   >
