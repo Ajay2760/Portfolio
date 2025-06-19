@@ -1,3 +1,5 @@
+import { Card, CardContent } from "@/components/ui/card";
+
 const AboutSection = () => {
   const details = [
     { label: "Location", value: "Kanchipuram, India" },
