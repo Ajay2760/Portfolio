@@ -2,11 +2,12 @@
 
 ## Overview
 
-This is a modern, full-stack portfolio website built for Ajay R, featuring a React frontend with a Node.js/Express backend. The application showcases personal information, education, experience, projects, skills, certifications, and includes a functional contact form. The architecture follows a clean separation between client and server with shared schema definitions.
+This is a modern, full-stack portfolio website built by Ajay R, featuring a React frontend with a Node.js/Express backend. The application showcases personal information, education, experience, projects, skills, certifications, and includes a functional contact form. The architecture follows a clean separation between client and server with shared schema definitions.
 
 ## System Architecture
 
 ### Frontend Architecture
+
 - **Framework**: React 18 with TypeScript
 - **Routing**: Wouter for lightweight client-side routing
 - **UI Components**: Radix UI primitives with shadcn/ui design system
@@ -16,6 +17,7 @@ This is a modern, full-stack portfolio website built for Ajay R, featuring a Rea
 - **Build Tool**: Vite for fast development and optimized builds
 
 ### Backend Architecture
+
 - **Runtime**: Node.js with Express framework
 - **Language**: TypeScript with ES modules
 - **Database**: PostgreSQL with Drizzle ORM
@@ -24,6 +26,7 @@ This is a modern, full-stack portfolio website built for Ajay R, featuring a Rea
 - **Development**: tsx for TypeScript execution in development
 
 ### Data Storage Solutions
+
 - **Database**: PostgreSQL (configured for Neon Database)
 - **ORM**: Drizzle ORM with PostgreSQL dialect
 - **Schema**: Centralized in `shared/schema.ts` with Zod validation
@@ -32,6 +35,7 @@ This is a modern, full-stack portfolio website built for Ajay R, featuring a Rea
 ## Key Components
 
 ### Database Schema
+
 ```typescript
 // Users table for potential authentication
 users: {
@@ -52,10 +56,12 @@ contacts: {
 ```
 
 ### API Endpoints
+
 - `POST /api/contact` - Submit contact form with validation
 - `GET /api/contacts` - Retrieve all contact submissions (admin use)
 
 ### Frontend Components
+
 - **Portfolio Sections**: Hero, About, Education, Experience, Projects, Skills, Certifications, Contact
 - **UI Components**: Complete shadcn/ui component library
 - **Theme Support**: Light/dark mode with system preference detection
@@ -73,6 +79,7 @@ contacts: {
 ## External Dependencies
 
 ### Frontend Dependencies
+
 - **UI Libraries**: Radix UI primitives, Lucide React icons
 - **Styling**: Tailwind CSS, class-variance-authority for component variants
 - **Forms**: React Hook Form, Hookform resolvers
@@ -80,12 +87,14 @@ contacts: {
 - **Utilities**: date-fns, clsx, tailwind-merge
 
 ### Backend Dependencies
+
 - **Database**: Drizzle ORM, @neondatabase/serverless
 - **Validation**: Zod for schema validation
 - **Development**: tsx for TypeScript execution
 - **Build**: esbuild for production bundling
 
 ### Development Tools
+
 - **Replit Integration**: Cartographer plugin for development environment
 - **Error Handling**: Runtime error overlay for development
 - **Type Checking**: TypeScript with strict configuration
@@ -93,18 +102,21 @@ contacts: {
 ## Deployment Strategy
 
 ### Development
+
 - **Command**: `npm run dev`
 - **Port**: 5000 (configured in .replit)
 - **Hot Reload**: Vite HMR for frontend, tsx watch for backend
 - **Environment**: NODE_ENV=development
 
 ### Production Build
+
 - **Frontend**: `vite build` - outputs to `dist/public`
 - **Backend**: `esbuild` bundle to `dist/index.js`
 - **Deployment**: Replit autoscale deployment target
 - **Start Command**: `npm run start` (NODE_ENV=production)
 
 ### Database Management
+
 - **Migrations**: Drizzle migrations in `./migrations` directory
 - **Schema Push**: `npm run db:push` for development schema updates
 - **Connection**: DATABASE_URL environment variable required
@@ -112,6 +124,7 @@ contacts: {
 ## Changelog
 
 Changelog:
+
 - June 18, 2025. Initial setup
 - June 18, 2025. Updated certifications section with authentic certificates:
   - Removed Infosys Java Foundation certificate
