@@ -29,7 +29,7 @@ const HeroSection = () => {
   const handleDownloadResume = () => {
     const link = document.createElement("a");
     link.href =
-      "https://drive.google.com/file/d/1iS46p3RKBAM2QX4Z5tui7l5Pjnr-6DiG/view?usp=sharing";
+      "https://drive.google.com/uc?export=download&id=1eR1pV6kD8vRrvn_Exkn2Fd7eC5oJNJvC";
     link.target = "_blank";
     link.rel = "noopener noreferrer";
     link.click();
