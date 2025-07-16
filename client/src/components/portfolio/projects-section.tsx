@@ -19,7 +19,7 @@ const ProjectsSection = () => {
       ],
       technologies: ["Figma", "Java", "Mobile Development"],
       techColors: [
-        "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200",
+        "bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200",
         "bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200",
         "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200",
       ],
@@ -58,10 +58,10 @@ const ProjectsSection = () => {
       ],
       technologies: ["React", "Typescript", "Recharts", "GitHub"],
       techColors: [
-        "bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200",
-        "bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200",
-        "bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200",
+        "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200",
         "bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200",
+        "bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200",
+        "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200",
       ],
     },
   ];
