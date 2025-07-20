@@ -29,7 +29,7 @@ const ProjectsSection = () => {
       description:
         "Built a fully responsive real-time chat application with advanced features like user status tracking and typing indicators to enhance user engagement.",
       image:
-        "https://images.unsplash.com/photo-1611606063065-ee7946f0787a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        "https://i.postimg.cc/wTy36WVw/CONNECT-1.png&auto=format&fit=crop&w=800&h=400",
       features: [
         "Real-time messaging with Socket.io",
         "Dynamic user status indicators",
@@ -53,7 +53,7 @@ const ProjectsSection = () => {
       features: [
         "Photo-enabled incident submission with smart categorization",
         "Priority-based classification (Critical, High, Medium, Low)",
-        "TDynamic charts showing incident trends and patterns",
+        "Dynamic charts showing incident trends and patterns",
         "Tag-based filtering with popular tag suggestions",
       ],
       technologies: ["React", "Typescript", "Recharts", "GitHub"],
