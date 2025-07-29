@@ -5,6 +5,7 @@ import AboutSection from "@/components/portfolio/about-section";
 import EducationSection from "@/components/portfolio/education-section";
 import ExperienceSection from "@/components/portfolio/experience-section";
 import ProjectsSection from "@/components/portfolio/projects-section";
+import DesignPortfolioSection from "@/components/portfolio/DesignPortfolioSection";
 import SkillsSection from "@/components/portfolio/skills-section";
 import CertificationsSection from "@/components/portfolio/certifications-section";
 import ContactSection from "@/components/portfolio/contact-section";
@@ -15,19 +16,19 @@ const Portfolio = () => {
     // Fade in animation on scroll
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      rootMargin: "0px 0px -50px 0px",
     };
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+          entry.target.classList.add("visible");
         }
       });
     }, observerOptions);
 
     // Observe all fade-in elements
-    document.querySelectorAll('.fade-in').forEach(el => {
+    document.querySelectorAll(".fade-in").forEach((el) => {
       observer.observe(el);
     });
 
@@ -42,6 +43,7 @@ const Portfolio = () => {
       <EducationSection />
       <ExperienceSection />
       <ProjectsSection />
+      <DesignPortfolioSection />
       <SkillsSection />
       <CertificationsSection />
       <ContactSection />
