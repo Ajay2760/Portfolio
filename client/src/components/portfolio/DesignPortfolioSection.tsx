@@ -21,7 +21,7 @@ const DesignPortfolioSection = () => {
 
           <Card className="shadow-lg overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1586281380349-632531db7ed5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
+              src="https://i.postimg.cc/m2yYNfNy/illustration-anime-city-1.jpg&auto=format&fit=crop&w=800&h=400"
               alt="Design Portfolio"
               className="w-full h-48 object-cover"
             />
@@ -50,7 +50,10 @@ const DesignPortfolioSection = () => {
                   variant="outline"
                   size="sm"
                   onClick={() =>
-                    window.open("https://www.figma.com/@ajay2760", "_blank")
+                    window.open(
+                      "https://www.figma.com/files/team/1283459112754983393/recents-and-sharing?fuid=1283459110526473319",
+                      "_blank"
+                    )
                   }
                 >
                   <Github className="mr-2 h-4 w-4" />
