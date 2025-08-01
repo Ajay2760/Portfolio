@@ -59,7 +59,7 @@ const ProjectsSection = () => {
       technologies: ["React", "Typescript", "Recharts", "GitHub"],
       techColors: [
         "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200",
-        "bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200",
+        "bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200",
         "bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200",
         "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200",
       ],
@@ -86,7 +86,7 @@ const ProjectsSection = () => {
       ],
       techColors: [
         "bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200",
-        "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200",
+        "bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200",
         "bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200",
         "bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200",
         "bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200",
