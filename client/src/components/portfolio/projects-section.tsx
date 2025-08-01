@@ -64,15 +64,39 @@ const ProjectsSection = () => {
         "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200",
       ],
     },
+    {
+      title: "CryptoTracker: Real-Time Cryptocurrency Dashboard",
+      description:
+        "Developed a sleek and interactive crypto dashboard for MacV AI’s frontend intern task. The platform offers real-time insights into top cryptocurrencies, allows users to track price trends, and manage a personalized watchlist — all powered by the CoinGecko API.",
+      image: "https://postimg.cc/ZvnH09fv&auto=format&fit=crop&w=800&h=400",
+      features: [
+        "Paginated list of top 50 cryptocurrencies with real-time data",
+        "Search and filter functionality for coin name, symbol, market cap, volume, and price change",
+        "Detailed coin view with price charts (24h, 7d, 30d, 90d)",
+        "Watchlist functionality with localStorage persistence",
+        "Responsive UI with graceful loading, error, and empty states",
+      ],
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "Tailwind CSS",
+        "Recharts",
+        "CoinGecko API",
+      ],
+      techColors: [
+        "bg-black text-white",
+        "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200",
+        "bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200",
+        "bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200",
+        "bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200",
+      ],
+    },
   ];
 
   const handleProjectAction = (action: string, project: any) => {
     if (project.title.includes("Pro Planet")) {
       if (action === "View Code") {
-        window.open(
-          "https://github.com/Ajay2760/Carbon-footprint-calculator",
-          "_blank"
-        );
+        window.open("https://github.com/Ajay2760/CryptoTracker", "_blank");
       } else if (action === "Live Demo") {
         window.open(
           "https://carbonfootprintcalculator0.netlify.app/",
