@@ -85,7 +85,7 @@ const ProjectsSection = () => {
         "CoinGecko API",
       ],
       techColors: [
-        "bg-black text-white",
+        "bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200",
         "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200",
         "bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200",
         "bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200",
