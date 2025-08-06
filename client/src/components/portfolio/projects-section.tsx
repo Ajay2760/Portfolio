@@ -66,7 +66,8 @@ const ProjectsSection = () => {
       ],
     },
     {
-      title: "CryptoTracker: Real-Time Cryptocurrency Dashboard",
+      title:
+        "CryptoTracker: Real-Time Cryptocurrency Dashboard (IN DEVELOPMENT)",
       description:
         "Developed a sleek and interactive crypto dashboard for MacV AI’s frontend intern task. The platform offers real-time insights into top cryptocurrencies, allows users to track price trends, and manage a personalized watchlist — all powered by the CoinGecko API.",
       image:
