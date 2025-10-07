@@ -26,7 +26,7 @@ const CertificationsSection = () => {
       color: "bg-blue-500",
       orgColor: "text-blue-500",
       certificateUrl:
-        "https://drive.google.com/file/d/1FcMQcxAD2wL-46YnuqsSfeDXmt7NzrV-/view",
+        "https://oneroadmap.io/skills/react/certificate/CERT-378E7CDE",
     },
     {
       title: "Ethics in the Age of Generative AI",
