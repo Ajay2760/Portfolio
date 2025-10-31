@@ -41,16 +41,16 @@ const CertificationsSection = () => {
         "https://drive.google.com/file/d/1J9gSqwKI5l6wrz6WrFvxExnlMhvSOQ3V/view",
     },
     {
-      title: "Design & Implementation of Human-Computer Interfaces",
-      organization: "NPTEL",
+      title: "Prompt Design in Vertex AI Skill Badge",
+      organization: "Google Cloud",
       description:
-        "12-week course on HCI design and Understanding about Human Interaction with Computers",
-      year: "2024",
+        "Completed the Introductory Prompt Design in Vertex AI skill badge, demonstrating expertise in prompt engineering, image analysis, and multimodal generative techniques using Gemini models for real-world marketing applications.",
+      year: "2025",
       icon: Award,
       color: "bg-purple-500",
       orgColor: "text-purple-500",
       certificateUrl:
-        "https://drive.google.com/file/d/1ykZHP9Oa33UZs0ZTcjLSb92oFN77NOaa/view",
+        "https://www.credly.com/badges/bcdddf9d-6d75-423b-8c8b-e78d9b45117f/public_url",
     },
   ];
 
