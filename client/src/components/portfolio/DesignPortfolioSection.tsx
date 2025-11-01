@@ -18,7 +18,7 @@ const DesignPortfolioSection = () => {
 
           <Card className="shadow-lg overflow-hidden">
             <img
-              src="https://i.postimg.cc/vZ39b5kk/download-3.jpg&auto=format&fit=crop&w=800&h=400"
+              src="https://i.postimg.cc/5t4hFWPR/colorful-night-in-the-mountains-digital-art-7680x4320-xtrafondos-com.jpg&auto=format&fit=crop&w=800&h=400"
               alt="Design Portfolio"
               className="w-full h-48 object-cover"
             />
