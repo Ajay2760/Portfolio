@@ -12,16 +12,13 @@ const DesignPortfolioSection = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               UI/UX Design Portfolio
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              A selection of creative design works, prototypes, and case studies
-              focused on user-centered design and visual storytelling.
-            </p>
+            <p className="text-muted-foreground max-w-2xl mx-auto"></p>
             <div className="w-24 h-1 bg-primary mx-auto mt-4"></div>
           </div>
 
           <Card className="shadow-lg overflow-hidden">
             <img
-              src="https://i.postimg.cc/m2yYNfNy/illustration-anime-city-1.jpg&auto=format&fit=crop&w=800&h=400"
+              src="https://i.postimg.cc/vZ39b5kk/download-3.jpg&auto=format&fit=crop&w=800&h=400"
               alt="Design Portfolio"
               className="w-full h-48 object-cover"
             />
@@ -30,8 +27,8 @@ const DesignPortfolioSection = () => {
                 Ajay's UI/UX Design Portfolio
               </h3>
               <p className="text-muted-foreground mb-4">
-                Explore a range of user interface and experience designs—from
-                product redesigns to interactive mobile-first prototypes.
+                Explore a range of user interface and experience designs from
+                product redesigns to interactive mobile first prototypes.
                 Created using Figma and guided by UX principles.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
