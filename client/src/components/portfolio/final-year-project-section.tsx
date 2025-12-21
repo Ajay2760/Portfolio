@@ -11,12 +11,17 @@ const FinalYearProjectSection = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Final Year Project
+              Paper Publication
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto"></div>
           </div>
 
-          <Card className="shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1761069183787-0272d2739ae6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Cotton Plant Disease Detection and Classification Using Cloud Computing"
+              className="w-full h-64 object-cover"
+            />
             <CardContent className="p-8 space-y-6">
               {/* Title */}
               <div className="flex items-center gap-3">
