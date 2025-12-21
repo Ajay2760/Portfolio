@@ -6,6 +6,7 @@ import EducationSection from "@/components/portfolio/education-section";
 import ExperienceSection from "@/components/portfolio/experience-section";
 import ProjectsSection from "@/components/portfolio/projects-section";
 import DesignPortfolioSection from "@/components/portfolio/DesignPortfolioSection";
+import FinalYearProjectSection from "@/components/portfolio/final-year-project-section";
 import SkillsSection from "@/components/portfolio/skills-section";
 import CertificationsSection from "@/components/portfolio/certifications-section";
 import ContactSection from "@/components/portfolio/contact-section";
@@ -44,6 +45,7 @@ const Portfolio = () => {
       <ExperienceSection />
       <ProjectsSection />
       <DesignPortfolioSection />
+      <FinalYearProjectSection />
       <SkillsSection />
       <CertificationsSection />
       <ContactSection />
