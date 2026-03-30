@@ -15,14 +15,19 @@ const Globe: React.FC = () => {
           @keyframes twinkling-fast { 0%,100% { opacity:0.1; } 50% { opacity:1; } }
         `}
       </style>
-      <div className="flex items-center justify-center w-full h-full">
+      <div className="flex items-center justify-center w-full py-8">
         <div
-          className="relative w-[260px] h-[260px] rounded-full overflow-hidden shadow-[0_0_20px_rgba(255,255,255,0.2),-5px_0_8px_#c3f4ff_inset,15px_2px_25px_#000_inset,-24px_-2px_34px_#c3f4ff99_inset,250px_0_44px_#00000066_inset,150px_0_38px_#000000aa_inset]"
+          className="relative rounded-full overflow-hidden"
           style={{
+            width: "260px",
+            height: "260px",
+            flexShrink: 0,
             backgroundImage: "url('https://pub-940ccf6255b54fa799a9b01050e6c227.r2.dev/globe.jpeg')",
             backgroundSize: "cover",
             backgroundPosition: "left",
             animation: "earthRotate 30s linear infinite",
+            boxShadow:
+              "0 0 20px rgba(255,255,255,0.2), -5px 0 8px #c3f4ff inset, 15px 2px 25px #000 inset, -24px -2px 34px #c3f4ff99 inset, 250px 0 44px #00000066 inset, 150px 0 38px #000000aa inset",
           }}
         >
           <div className="absolute left-[-20px] top-[10px] w-1 h-1 bg-white rounded-full" style={{ animation: "twinkling 3s infinite" }} />

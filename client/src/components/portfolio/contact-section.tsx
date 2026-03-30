@@ -44,7 +44,7 @@ const ContactSection = () => {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left — Globe */}
-            <div className="flex items-center justify-center min-h-[340px]">
+            <div className="flex items-center justify-center">
               <Globe />
             </div>
 

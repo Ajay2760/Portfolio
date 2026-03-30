@@ -8,11 +8,11 @@ interface GlowCardProps {
 }
 
 const glowColorMap = {
-  blue:   { h: 220, s: 100, l: 60 },
-  purple: { h: 280, s: 100, l: 65 },
-  green:  { h: 140, s: 100, l: 50 },
-  red:    { h: 0,   s: 100, l: 60 },
-  orange: { h: 30,  s: 100, l: 55 },
+  blue:   { h: 217, s: 91, l: 60 },
+  purple: { h: 271, s: 81, l: 60 },
+  green:  { h: 142, s: 76, l: 45 },
+  red:    { h: 0,   s: 84, l: 60 },
+  orange: { h: 27,  s: 96, l: 55 },
 };
 
 const GlowCard: React.FC<GlowCardProps> = ({
@@ -31,12 +31,8 @@ const GlowCard: React.FC<GlowCardProps> = ({
 
     const handleMove = (e: PointerEvent) => {
       const rect = card.getBoundingClientRect();
-      setPos({
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top,
-      });
+      setPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
     };
-
     const handleEnter = () => setIsHovered(true);
     const handleLeave = () => setIsHovered(false);
 
@@ -52,17 +48,17 @@ const GlowCard: React.FC<GlowCardProps> = ({
   }, []);
 
   const { h, s, l } = glowColorMap[glowColor];
-  const spotSize = 280;
-  const opacity = isHovered ? 0.9 : 0;
-  const bgOpacity = isHovered ? 0.06 : 0;
+  const spotSize = 300;
+  const borderOpacity = isHovered ? 1 : 0;
+  const bgOpacity = isHovered ? 0.08 : 0;
 
   return (
     <div
       ref={cardRef}
-      className={`relative rounded-2xl overflow-hidden shadow-lg ${customSize ? 'w-full' : ''} ${className}`}
+      className={`relative rounded-2xl overflow-hidden shadow-lg transition-shadow duration-300 ${isHovered ? 'shadow-xl' : ''} ${customSize ? 'w-full' : ''} ${className}`}
       style={{ isolation: 'isolate' }}
     >
-      {/* Border glow layer — sits behind content via z-index */}
+      {/* Subtle background tint on hover */}
       <div
         aria-hidden
         style={{
@@ -71,15 +67,15 @@ const GlowCard: React.FC<GlowCardProps> = ({
           borderRadius: 'inherit',
           zIndex: 0,
           pointerEvents: 'none',
-          transition: 'opacity 0.15s ease',
-          /* Glow on border using box-shadow inset trick + pseudo via background on the wrapper */
           background: `radial-gradient(${spotSize}px ${spotSize}px at ${pos.x}px ${pos.y}px,
             hsl(${h} ${s}% ${l}% / ${bgOpacity}),
             transparent 70%
           )`,
+          transition: 'opacity 0.2s ease',
         }}
       />
-      {/* Actual glowing border */}
+
+      {/* Glowing border — uses mask to only paint the border area */}
       <div
         aria-hidden
         style={{
@@ -88,18 +84,19 @@ const GlowCard: React.FC<GlowCardProps> = ({
           borderRadius: 'inherit',
           zIndex: 0,
           pointerEvents: 'none',
-          padding: '1.5px',
+          padding: '2px',
+          background: `radial-gradient(${spotSize}px ${spotSize}px at ${pos.x}px ${pos.y}px,
+            hsl(${h} ${s}% ${l}% / ${borderOpacity}),
+            transparent 70%
+          )`,
           WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
           WebkitMaskComposite: 'xor',
           maskComposite: 'exclude',
-          background: `radial-gradient(${spotSize}px ${spotSize}px at ${pos.x}px ${pos.y}px,
-            hsl(${h} ${s}% ${l}% / ${opacity}),
-            transparent 70%
-          )`,
-          transition: 'opacity 0.15s ease',
+          transition: 'opacity 0.2s ease',
         }}
       />
-      {/* Content */}
+
+      {/* Content layer */}
       <div className="relative flex flex-col h-full" style={{ zIndex: 1 }}>
         {children}
       </div>
