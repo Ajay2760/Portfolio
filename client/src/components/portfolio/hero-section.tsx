@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { FloatingPaths } from "@/components/ui/background-paths";
 import { Mail, Download } from "lucide-react";
 
 const HeroSection = () => {
@@ -38,9 +39,14 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-muted to-background dark:from-muted dark:to-background"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-neutral-950"
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Animated background paths */}
+      <FloatingPaths position={1} />
+      <FloatingPaths position={-1} />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="fade-in visible">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Hi, I'm <span className="text-accent">Ajay R</span>
