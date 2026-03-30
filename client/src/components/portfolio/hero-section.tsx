@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { FloatingPaths } from "@/components/ui/background-paths";
+import { GenerativeArtScene } from "@/components/ui/anomalous-matter-hero";
 import { Mail, Download } from "lucide-react";
 
 const HeroSection = () => {
@@ -39,14 +39,16 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-neutral-950"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background"
     >
-      {/* Animated background paths */}
-      <FloatingPaths position={1} />
-      <FloatingPaths position={-1} />
+      {/* 3D animated wireframe sphere background */}
+      <GenerativeArtScene />
+
+      {/* Gradient overlay so text stays readable */}
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent z-10 pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="fade-in visible">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Hi, I'm <span className="text-accent">Ajay R</span>
