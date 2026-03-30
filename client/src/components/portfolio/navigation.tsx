@@ -42,7 +42,7 @@ const Navigation = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="text-xl font-bold text-primary cursor-pointer" onClick={() => scrollToSection("home")}>
+          <div className="text-xl font-bold text-accent cursor-pointer" onClick={() => scrollToSection("home")}>
             Ajay R
           </div>
           

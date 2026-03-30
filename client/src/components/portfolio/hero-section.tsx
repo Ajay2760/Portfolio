@@ -38,12 +38,12 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/5 dark:to-accent/5"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-muted to-background dark:from-muted dark:to-background"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="fade-in visible">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Hi, I'm <span className="text-primary">Ajay R</span>
+            Hi, I'm <span className="text-accent">Ajay R</span>
           </h1>
           <div className="text-xl md:text-2xl mb-8 h-8">
             <span className="typing-animation">{displayText}</span>
