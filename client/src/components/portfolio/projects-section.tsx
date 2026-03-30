@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { GlowCard } from "@/components/ui/spotlight-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from "lucide-react";
@@ -24,6 +24,7 @@ const ProjectsSection = () => {
         "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200",
         "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200",
       ],
+      glowColor: "green" as const,
     },
     {
       title: "Connect: Real-Time Chat Application",
@@ -44,6 +45,7 @@ const ProjectsSection = () => {
         "bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200",
         "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200",
       ],
+      glowColor: "blue" as const,
     },
     {
       title: "SnapReport: Community-Driven Incident Management Platform",
@@ -64,11 +66,12 @@ const ProjectsSection = () => {
         "bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200",
         "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200",
       ],
+      glowColor: "orange" as const,
     },
     {
       title: "CryptoTracker: Real-Time Cryptocurrency Dashboard",
       description:
-        "Developed a sleek and interactive crypto dashboard for MacV AI’s frontend intern task. The platform offers real-time insights into top cryptocurrencies, allows users to track price trends, and manage a personalized watchlist all powered by the CoinGecko API.",
+        "Developed a sleek and interactive crypto dashboard for MacV AI's frontend intern task. The platform offers real-time insights into top cryptocurrencies, allows users to track price trends, and manage a personalized watchlist all powered by the CoinGecko API.",
       image:
         "https://i.postimg.cc/GtJ57GGK/erling-loken-andersen-af-The-PQEZs-M-unsplash-1.jpg&auto=format&fit=crop&w=800&h=400",
       features: [
@@ -92,6 +95,7 @@ const ProjectsSection = () => {
         "bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200",
         "bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200",
       ],
+      glowColor: "purple" as const,
     },
   ];
 
@@ -141,16 +145,18 @@ const ProjectsSection = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <Card
+              <GlowCard
                 key={index}
-                className="project-card shadow-lg overflow-hidden"
+                glowColor={project.glowColor}
+                customSize={true}
+                className="w-full flex flex-col"
               >
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-cover rounded-t-xl flex-shrink-0"
                 />
-                <CardContent className="p-8">
+                <div className="p-8 flex flex-col flex-1">
                   <h3 className="text-xl font-semibold mb-3">
                     {project.title}
                   </h3>
@@ -175,7 +181,7 @@ const ProjectsSection = () => {
                       </Badge>
                     ))}
                   </div>
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-4 mt-auto">
                     <Button
                       variant="outline"
                       size="sm"
@@ -195,8 +201,8 @@ const ProjectsSection = () => {
                       Live Demo
                     </Button>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </GlowCard>
             ))}
           </div>
         </div>
