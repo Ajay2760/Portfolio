@@ -149,12 +149,12 @@ const ProjectsSection = () => {
                 key={index}
                 glowColor={project.glowColor}
                 customSize={true}
-                className="w-full flex flex-col"
+                className="bg-card"
               >
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover rounded-t-xl flex-shrink-0"
+                  className="w-full h-48 object-cover flex-shrink-0"
                 />
                 <div className="p-8 flex flex-col flex-1">
                   <h3 className="text-xl font-semibold mb-3">
