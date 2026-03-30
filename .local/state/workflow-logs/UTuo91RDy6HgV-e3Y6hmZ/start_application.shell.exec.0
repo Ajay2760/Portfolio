@@ -1,0 +1,104 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+[1G[0K6:46:19 AM [express] serving on port 5000
+Browserslist: browsers data (caniuse-lite) is 17 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:47:52 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ui/globe.tsx, /src/index.css?v=oyx5JSDnc8Eu-Oxksu1gw[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:47:59 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/portfolio/contact-section.tsx, /src/index.css?v=oyx5JSDnc8Eu-Oxksu1gw[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:48:19 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ui/spotlight-card.tsx, /src/index.css?v=oyx5JSDnc8Eu-Oxksu1gw[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:28 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css?v=oyx5JSDnc8Eu-Oxksu1gw[22m
