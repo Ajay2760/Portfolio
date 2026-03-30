@@ -1,6 +1,6 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { GlowCard } from "@/components/ui/spotlight-card";
 import { Github, ExternalLink } from "lucide-react";
 
 const DesignPortfolioSection = () => {
@@ -16,13 +16,13 @@ const DesignPortfolioSection = () => {
             <div className="w-24 h-1 bg-primary mx-auto mt-4"></div>
           </div>
 
-          <Card className="shadow-lg overflow-hidden">
+          <GlowCard glowColor="purple" customSize={true} className="bg-card">
             <img
               src="https://i.postimg.cc/5t4hFWPR/colorful-night-in-the-mountains-digital-art-7680x4320-xtrafondos-com.jpg&auto=format&fit=crop&w=800&h=400"
               alt="Design Portfolio"
-              className="w-full h-48 object-cover"
+              className="w-full h-48 object-cover flex-shrink-0"
             />
-            <CardContent className="p-8">
+            <div className="p-8">
               <h3 className="text-xl font-semibold mb-3">
                 Ajay's UI/UX Design Portfolio
               </h3>
@@ -70,8 +70,8 @@ const DesignPortfolioSection = () => {
                   Live Portfolio
                 </Button>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </GlowCard>
         </div>
       </div>
     </section>

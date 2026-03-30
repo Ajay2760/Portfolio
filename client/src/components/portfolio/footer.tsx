@@ -19,7 +19,6 @@ const Footer = () => {
       X: "https://x.com/Ajay_0157",
       Instagram: "https://www.instagram.com/_ajay._.17_",
     };
-
     if (socialUrls[platform]) {
       window.open(socialUrls[platform], "_blank");
     }
@@ -40,7 +39,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 dark:bg-slate-950 text-slate-300 py-12">
+    <footer className="bg-[#171717] dark:bg-[#0a0a0a] text-neutral-300 py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-8">
           <div>
@@ -56,7 +55,7 @@ const Footer = () => {
                   variant="ghost"
                   size="icon"
                   onClick={() => handleSocialClick(social.label)}
-                  className="hover:text-primary transition-colors p-0 h-auto w-auto"
+                  className="text-neutral-300 hover:text-accent transition-colors p-0 h-auto w-auto"
                 >
                   <social.icon className="h-5 w-5" />
                 </Button>
@@ -65,15 +64,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">
-              Quick Links
-            </h4>
+            <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <button
                     onClick={() => scrollToSection(link.id)}
-                    className="hover:text-primary transition-colors text-left"
+                    className="text-neutral-300 hover:text-accent transition-colors text-left"
                   >
                     {link.label}
                   </button>
@@ -83,8 +80,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-slate-700 mt-8 pt-8 text-center">
-          <p className="text-sm">
+        <div className="border-t border-neutral-700 mt-8 pt-8 text-center">
+          <p className="text-sm text-neutral-400">
             &copy; {currentYear} Ajay R. All rights reserved by me. Built with
             passion and modern web technologies.
           </p>

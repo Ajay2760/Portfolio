@@ -59,7 +59,7 @@ const ExperienceSection = () => {
                     <p className="text-muted-foreground">{mainExperience.location}</p>
                   </div>
                   <div className="mt-4 lg:mt-0">
-                    <Badge className="bg-primary text-white">{mainExperience.year}</Badge>
+                    <Badge className="bg-accent text-white">{mainExperience.year}</Badge>
                   </div>
                 </div>
                 <ul className="space-y-3">
@@ -90,7 +90,7 @@ const ExperienceSection = () => {
             </div>
 
             {/* Hackathon */}
-            <Card className="bg-gradient-to-r from-primary/10 to-accent/10 dark:from-primary/5 dark:to-accent/5 shadow-lg">
+            <Card className="bg-gradient-to-r from-accent/10 to-blue-600/10 shadow-lg">
               <CardContent className="p-8">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                   <div>
@@ -99,7 +99,7 @@ const ExperienceSection = () => {
                     <p className="text-muted-foreground">{hackathon.location}</p>
                   </div>
                   <div className="mt-4 lg:mt-0">
-                    <Badge className="bg-gradient-to-r from-primary to-accent text-white">
+                    <Badge className="bg-gradient-to-r from-accent to-blue-600 text-white">
                       <Trophy className="mr-1 h-4 w-4" />
                       Participant
                     </Badge>
