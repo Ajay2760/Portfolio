@@ -17,26 +17,44 @@ const Globe: React.FC = () => {
       </style>
       <div className="flex items-center justify-center w-full py-8">
         <div
-          className="relative rounded-full overflow-hidden"
+          className="relative rounded-full"
           style={{
             width: "260px",
             height: "260px",
             flexShrink: 0,
-            backgroundImage: "url('https://pub-940ccf6255b54fa799a9b01050e6c227.r2.dev/globe.jpeg')",
-            backgroundSize: "cover",
-            backgroundPosition: "left",
-            animation: "earthRotate 30s linear infinite",
-            boxShadow:
-              "0 0 20px rgba(255,255,255,0.2), -5px 0 8px #c3f4ff inset, 15px 2px 25px #000 inset, -24px -2px 34px #c3f4ff99 inset, 250px 0 44px #00000066 inset, 150px 0 38px #000000aa inset",
           }}
         >
-          <div className="absolute left-[-20px] top-[10px] w-1 h-1 bg-white rounded-full" style={{ animation: "twinkling 3s infinite" }} />
-          <div className="absolute left-[-40px] top-[30px] w-1 h-1 bg-white rounded-full" style={{ animation: "twinkling-slow 2s infinite" }} />
-          <div className="absolute left-[350px] top-[90px] w-1 h-1 bg-white rounded-full" style={{ animation: "twinkling-long 4s infinite" }} />
-          <div className="absolute left-[200px] top-[290px] w-1 h-1 bg-white rounded-full" style={{ animation: "twinkling 3s infinite" }} />
-          <div className="absolute left-[50px] top-[270px] w-1 h-1 bg-white rounded-full" style={{ animation: "twinkling-fast 1.5s infinite" }} />
-          <div className="absolute left-[250px] top-[-50px] w-1 h-1 bg-white rounded-full" style={{ animation: "twinkling-long 4s infinite" }} />
-          <div className="absolute left-[290px] top-[60px] w-1 h-1 bg-white rounded-full" style={{ animation: "twinkling-slow 2s infinite" }} />
+          {/* Animated Globe Background */}
+          <div
+            className="absolute inset-0 rounded-full overflow-hidden"
+            style={{
+              backgroundImage: "url('https://pub-940ccf6255b54fa799a9b01050e6c227.r2.dev/globe.jpeg')",
+              backgroundSize: "cover",
+              backgroundPosition: "left",
+              animation: "earthRotate 12s linear infinite",
+              willChange: "background-position",
+              transform: "translateZ(0)",
+              backfaceVisibility: "hidden",
+            }}
+          />
+          
+          {/* Complex shadows separated from the animated background */}
+          <div
+            className="absolute inset-0 rounded-full"
+            style={{
+              boxShadow:
+                "0 0 20px rgba(255,255,255,0.2), -5px 0 8px #c3f4ff inset, 15px 2px 25px #000 inset, -24px -2px 34px #c3f4ff99 inset, 250px 0 44px #00000066 inset, 150px 0 38px #000000aa inset",
+              pointerEvents: "none",
+            }}
+          />
+
+          <div className="absolute left-[-20px] top-[10px] w-1 h-1 bg-white rounded-full z-[-1]" style={{ animation: "twinkling 3s infinite" }} />
+          <div className="absolute left-[-40px] top-[30px] w-1 h-1 bg-white rounded-full z-[-1]" style={{ animation: "twinkling-slow 2s infinite" }} />
+          <div className="absolute left-[350px] top-[90px] w-1 h-1 bg-white rounded-full z-[-1]" style={{ animation: "twinkling-long 4s infinite" }} />
+          <div className="absolute left-[200px] top-[290px] w-1 h-1 bg-white rounded-full z-[-1]" style={{ animation: "twinkling 3s infinite" }} />
+          <div className="absolute left-[50px] top-[270px] w-1 h-1 bg-white rounded-full z-[-1]" style={{ animation: "twinkling-fast 1.5s infinite" }} />
+          <div className="absolute left-[250px] top-[-50px] w-1 h-1 bg-white rounded-full z-[-1]" style={{ animation: "twinkling-long 4s infinite" }} />
+          <div className="absolute left-[290px] top-[60px] w-1 h-1 bg-white rounded-full z-[-1]" style={{ animation: "twinkling-slow 2s infinite" }} />
         </div>
       </div>
     </>
