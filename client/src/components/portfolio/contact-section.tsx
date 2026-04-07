@@ -1,7 +1,7 @@
 import Globe from "@/components/ui/globe";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Github, Linkedin, Instagram } from "lucide-react";
-import { FaXTwitter } from "react-icons/fa6";
+import { Mail, Phone, MapPin } from "lucide-react";
+import ButtonSocialIconDemo from "@/components/ui/social-icon";
 
 const ContactSection = () => {
   const contactInfo = [
@@ -22,12 +22,7 @@ const ContactSection = () => {
     },
   ];
 
-  const socialLinks = [
-    { icon: Github, href: "https://github.com/Ajay2760", label: "GitHub" },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/ajayr1234/", label: "LinkedIn" },
-    { icon: FaXTwitter, href: "https://x.com/Ajay_0157", label: "X" },
-    { icon: Instagram, href: "https://www.instagram.com/_ajay._.17_", label: "Instagram" },
-  ];
+
 
   return (
     <section id="contact" className="py-20 bg-card">
@@ -67,21 +62,8 @@ const ContactSection = () => {
               </div>
 
               <div>
-                <h4 className="font-medium mb-4">Follow Me</h4>
-                <div className="flex space-x-4">
-                  {socialLinks.map((social, index) => (
-                    <Button
-                      key={index}
-                      variant="outline"
-                      size="icon"
-                      onClick={() => window.open(social.href, "_blank")}
-                      aria-label={social.label}
-                      className="hover:bg-primary hover:text-white transition-colors"
-                    >
-                      <social.icon className="h-4 w-4" />
-                    </Button>
-                  ))}
-                </div>
+                <h4 className="text-xl font-medium mb-4">Follow Me</h4>
+                <ButtonSocialIconDemo />
               </div>
             </div>
           </div>
