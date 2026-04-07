@@ -1,9 +1,28 @@
 import Globe from "@/components/ui/globe";
 import { Button } from "@/components/ui/button";
-import { LocationTag } from "@/components/ui/location-tag";
+import { Mail, Phone, MapPin } from "lucide-react";
 import ButtonSocialIconDemo from "@/components/ui/social-icon";
 
 const ContactSection = () => {
+  const contactInfo = [
+    {
+      icon: Mail,
+      title: "Email",
+      value: "ajaykpm0157@gmail.com",
+    },
+    {
+      icon: Phone,
+      title: "Phone",
+      value: "+91 8940005533",
+    },
+    {
+      icon: MapPin,
+      title: "Location",
+      value: "Kanchipuram, Tamil Nadu, India",
+    },
+  ];
+
+
 
   return (
     <section id="contact" className="py-20 bg-card">
@@ -28,26 +47,18 @@ const ContactSection = () => {
             <div>
               <h3 className="text-2xl font-semibold mb-8">Let's Connect</h3>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
-                <div>
-                  <h4 className="text-lg font-semibold mb-3">Location</h4>
-                  {/* The location tag natively has padding, negative margin can align it visually or we just render it */}
-                  <div className="-ml-4 sm:ml-0">
-                    <LocationTag city="Kanchipuram" country="Tamilnadu" timezone="IST" />
+              <div className="space-y-6 mb-10">
+                {contactInfo.map((info, index) => (
+                  <div key={index} className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <info.icon className="text-primary h-5 w-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-medium">{info.title}</h4>
+                      <p className="text-muted-foreground">{info.value}</p>
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold mb-3">Email</h4>
-                  <p className="text-muted-foreground">ajaykpm0157@gmail.com</p>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold mb-3">Phone</h4>
-                  <p className="text-muted-foreground">+91 8940005533</p>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold mb-3">Status</h4>
-                  <p className="text-emerald-500 font-medium">Available for work</p>
-                </div>
+                ))}
               </div>
 
               <div>

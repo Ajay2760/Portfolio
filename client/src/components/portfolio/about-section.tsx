@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { LocationTag } from "@/components/ui/location-tag";
 
 const AboutSection = () => {
   const details = [
@@ -44,15 +45,21 @@ const AboutSection = () => {
                 {details.map((detail, index) => (
                   <div key={index}>
                     <h4 className="font-semibold mb-2">{detail.label}</h4>
-                    <p
-                      className={
-                        detail.highlight
-                          ? "text-green-500 font-medium"
-                          : "text-muted-foreground"
-                      }
-                    >
-                      {detail.value}
-                    </p>
+                    {detail.label === "Location" ? (
+                      <div className="-ml-4 sm:ml-0">
+                        <LocationTag city="Kanchipuram" country="India" timezone="IST" />
+                      </div>
+                    ) : (
+                      <p
+                        className={
+                          detail.highlight
+                            ? "text-green-500 font-medium"
+                            : "text-muted-foreground"
+                        }
+                      >
+                        {detail.value}
+                      </p>
+                    )}
                   </div>
                 ))}
               </div>
