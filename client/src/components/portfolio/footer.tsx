@@ -39,12 +39,12 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#171717] dark:bg-[#0a0a0a] text-neutral-300 py-12">
+    <footer className="bg-background border-t border-border py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-8">
           <div>
-            <h3 className="text-xl font-bold text-white mb-4">Ajay R</h3>
-            <p className="mb-4">
+            <h3 className="text-xl font-bold text-foreground mb-4">Ajay R</h3>
+            <p className="mb-4 text-muted-foreground">
               Web Developer passionate about creating innovative web solutions
               and learning new technologies.
             </p>
@@ -55,7 +55,7 @@ const Footer = () => {
                   variant="ghost"
                   size="icon"
                   onClick={() => handleSocialClick(social.label)}
-                  className="text-neutral-300 hover:text-accent transition-colors p-0 h-auto w-auto"
+                  className="text-muted-foreground hover:text-foreground transition-colors p-1"
                 >
                   <social.icon className="h-5 w-5" />
                 </Button>
@@ -64,13 +64,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-foreground mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <button
                     onClick={() => scrollToSection(link.id)}
-                    className="text-neutral-300 hover:text-accent transition-colors text-left"
+                    className="text-muted-foreground hover:text-foreground transition-colors text-left"
                   >
                     {link.label}
                   </button>
@@ -80,8 +80,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-neutral-700 mt-8 pt-8 text-center">
-          <p className="text-sm text-neutral-400">
+        <div className="border-t border-border mt-8 pt-8 text-center">
+          <p className="text-sm text-muted-foreground">
             &copy; {currentYear} Ajay R. All rights reserved by me. Built with
             passion and modern web technologies.
           </p>
