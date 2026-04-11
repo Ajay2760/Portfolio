@@ -45,7 +45,7 @@ const ProjectsSection = () => {
         "bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200",
         "bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200",
       ],
-      glowColor: "indigo" as const,
+      glowColor: "blue" as const,
     },
     {
       title: "SnapReport: Community-Driven Incident Management Platform",
