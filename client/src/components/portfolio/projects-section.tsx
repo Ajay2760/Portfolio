@@ -27,25 +27,25 @@ const ProjectsSection = () => {
       glowColor: "green" as const,
     },
     {
-      title: "Connect: Real-Time Chat Application",
+      title: "ResumeHacker AI: Intelligent Resume Optimization Platform",
       description:
-        "Built a fully responsive real-time chat application with advanced features like user status tracking and typing indicators to enhance user engagement.",
+        "Developed a full-stack AI-driven application that evaluates resumes against job descriptions to improve ATS compatibility and candidate success rates.",
       image:
-        "https://i.postimg.cc/wTy36WVw/CONNECT-1.png&auto=format&fit=crop&w=800&h=400",
+        "https://i.ibb.co/F44mGpDP/Screenshot-2026-04-11-230013.png",
       features: [
-        "Real-time messaging with Socket.io",
-        "Dynamic user status indicators",
-        "Typing indicators and message delivery",
-        "Responsive design across devices",
+        "Engineered an AI-based ATS scoring system to analyze resume relevance and keyword alignment with job descriptions",
+        "Implemented intelligent resume parsing and skill gap detection to provide actionable, data-driven improvement suggestions",
+        "Built a responsive and intuitive user interface ensuring seamless resume upload, analysis, and feedback experience",
+        "Designed scalable backend architecture with RESTful APIs for efficient data processing and AI integration",
       ],
-      technologies: ["React", "Node.js", "Socket.io", "GitHub"],
+      technologies: ["React", "Express", "TailwindCSS", "Groq AI"],
       techColors: [
         "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200",
         "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200",
-        "bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200",
-        "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200",
+        "bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200",
+        "bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200",
       ],
-      glowColor: "blue" as const,
+      glowColor: "indigo" as const,
     },
     {
       title: "SnapReport: Community-Driven Incident Management Platform",
@@ -109,11 +109,11 @@ const ProjectsSection = () => {
           "_blank"
         );
       }
-    } else if (project.title.includes("Connect")) {
+    } else if (project.title.includes("ResumeHacker AI")) {
       if (action === "View Code") {
-        window.open("https://github.com/Ajay2760/Connect", "_blank");
+        window.open("https://github.com/Ajay2760/ResumeHacker-AI", "_blank");
       } else if (action === "Live Demo") {
-        window.open("https://connect-fpzv.onrender.com/", "_blank");
+        window.open("https://resumeranker-ai-ewwk.onrender.com/", "_blank");
       }
     } else if (project.title.includes("SnapReport")) {
       if (action === "View Code") {
