@@ -33,6 +33,7 @@ const Navigation = () => {
     { label: "Education", id: "education" },
     { label: "Experience", id: "experience" },
     { label: "Projects", id: "projects" },
+    { label: "Hackathons", id: "hackathons" },
     { label: "Paper Publication", id: "final-year-project" },
     { label: "Skills", id: "skills" },
     { label: "Contact", id: "contact" },

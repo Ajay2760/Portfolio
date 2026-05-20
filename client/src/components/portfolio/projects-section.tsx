@@ -6,6 +6,52 @@ import { Github, ExternalLink } from "lucide-react";
 const ProjectsSection = () => {
   const projects = [
     {
+      title: "ClearGlass — AI-Powered Fraud Detection Platform",
+      description:
+        "A full-stack financial fraud intelligence platform built with React, Node.js, and PostgreSQL — featuring real-time transaction monitoring, explainable AI, and synthetic data generation.",
+      image:
+        "/assets/clearglass.png",
+      features: [
+        "Built a production-ready fraud detection dashboard with a dark SOC-style UI, displaying live KPIs including fraud rate, total amount at risk, and active alert count",
+        "Designed and implemented a contract-first REST API in Express 5 + TypeScript with OpenAPI codegen (Orval) to auto-generate type-safe React Query hooks and Zod validation schemas",
+        "Modelled and seeded a PostgreSQL database using Drizzle ORM with tables for transactions, fraud alerts, ML models, synthetic data jobs, and a real-time activity feed",
+        "Implemented a fraud scoring engine that factors transaction amount, merchant category, and country of origin to classify transactions as fraud / review / legitimate in real time",
+        "Integrated Explainable AI (XAI) on every transaction detail page — a SHAP-style feature contribution chart shows analysts exactly why a transaction was flagged",
+        "Showcased 5 ML model comparison metrics (XGBoost, LightGBM, CatBoost, Isolation Forest, Stacking Ensemble) including AUC-ROC, Precision, Recall, F1-Score, and PR-AUC drawn from real research benchmarks",
+        "Built a Synthetic Data Lab supporting 5 generation methods (GAN, VAE, SMOTE, ADASYN, Faker) with simulated job lifecycle (queued → running → completed)",
+        "Deployed on Replit with a shared reverse proxy routing frontend (/) and API (/api) behind a single HTTPS domain",
+      ],
+      technologies: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Wouter",
+        "Recharts",
+        "TanStack Query",
+        "Express 5",
+        "Drizzle ORM",
+        "PostgreSQL",
+        "Zod",
+        "OpenAPI",
+        "pnpm Workspaces"
+      ],
+      techColors: [
+        "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200",
+        "bg-sky-100 dark:bg-sky-900 text-sky-800 dark:text-sky-200",
+        "bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200",
+        "bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200",
+        "bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200",
+        "bg-rose-100 dark:bg-rose-900 text-rose-800 dark:text-rose-200",
+        "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200",
+        "bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200",
+        "bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200",
+        "bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200",
+        "bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200",
+        "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200",
+      ],
+      glowColor: "red" as const,
+    },
+    {
       title: "Pro Planet: Carbon Footprint Calculator",
       description:
         "Developed a comprehensive mobile application prototype that calculates users' carbon emissions based on their daily habits and lifestyle choices.",
@@ -100,7 +146,13 @@ const ProjectsSection = () => {
   ];
 
   const handleProjectAction = (action: string, project: any) => {
-    if (project.title.includes("Pro Planet")) {
+    if (project.title.includes("ClearGlass")) {
+      if (action === "View Code") {
+        window.open("https://github.com/Ajay2760/Clear-Glass--Fraud-Detection-Suite", "_blank");
+      } else if (action === "Live Demo") {
+        window.open("https://fraud-detection-suite--zeusgamer0157.replit.app/", "_blank");
+      }
+    } else if (project.title.includes("Pro Planet")) {
       if (action === "View Code") {
         window.open("https://github.com/Ajay2760/CryptoTracker", "_blank");
       } else if (action === "Live Demo") {

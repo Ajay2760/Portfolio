@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Wrench, Lightbulb, Trophy } from "lucide-react";
+import { CheckCircle, Wrench, Lightbulb } from "lucide-react";
 
 const ExperienceSection = () => {
   const mainExperience = {
@@ -32,12 +32,7 @@ const ExperienceSection = () => {
     },
   ];
 
-  const hackathon = {
-    title: "Smart India Hackathon 2023",
-    subtitle: "24-Hour Institute Level Hackathon",
-    location: "Sri Venkateswara College of Engineering, Sriperumbudur",
-    description: "Participated in India's premier hackathon initiative, collaborating with teams to develop innovative solutions for real-world challenges within a 24-hour timeframe.",
-  };
+
 
   return (
     <section id="experience" className="py-20 bg-card">
@@ -89,25 +84,7 @@ const ExperienceSection = () => {
               ))}
             </div>
 
-            {/* Hackathon */}
-            <Card className="bg-gradient-to-r from-accent/10 to-blue-600/10 shadow-lg">
-              <CardContent className="p-8">
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">{hackathon.title}</h3>
-                    <p className="text-primary font-medium mb-2">{hackathon.subtitle}</p>
-                    <p className="text-muted-foreground">{hackathon.location}</p>
-                  </div>
-                  <div className="mt-4 lg:mt-0">
-                    <Badge className="bg-gradient-to-r from-accent to-blue-600 text-white">
-                      <Trophy className="mr-1 h-4 w-4" />
-                      Participant
-                    </Badge>
-                  </div>
-                </div>
-                <p className="text-muted-foreground">{hackathon.description}</p>
-              </CardContent>
-            </Card>
+
           </div>
         </div>
       </div>

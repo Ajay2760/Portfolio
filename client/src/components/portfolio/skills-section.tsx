@@ -52,6 +52,13 @@ const SkillsSection = () => {
       skills: ["AWS (Beginner)", "OpenCV", "Machine Learning", "REST APIs"],
       badgeClass: "bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200",
     },
+    {
+      title: "Advanced Stack (ClearGlass)",
+      icon: Code,
+      color: "text-blue-500",
+      skills: ["React", "TypeScript", "Vite", "Wouter", "Recharts", "TanStack Query", "Express 5", "Drizzle ORM", "PostgreSQL", "Zod", "OpenAPI", "pnpm Workspaces"],
+      badgeClass: "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200",
+    },
   ];
 
   return (
