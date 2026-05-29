@@ -6,25 +6,25 @@ import { Github, ExternalLink } from "lucide-react";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Pro Planet: Carbon Footprint Calculator",
+      title: "Workflow Pro",
       description:
-        "Developed a comprehensive mobile application prototype that calculates users' carbon emissions based on their daily habits and lifestyle choices.",
+        "Workflow Pro is a secure workflow engine demonstrating advanced state management and API design, allowing Users, Managers, and Admins to seamlessly create, track, and process requests.",
       image:
-        "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        "/assets/workflow-pro.jpg",
       features: [
-        "Personalized carbon footprint tracking",
-        "AI-powered reduction recommendations",
-        "Habit-based emission calculations",
-        "Interactive user interface design",
+        "Role-Based Access Control (RBAC) allowing Users, Managers, and Admins to interact securely",
+        "Advanced state machine for creation, tracking, and seamless processing of workflow requests",
+        "Robust REST API design with strict permission checks and input validation",
+        "Clean, interactive dashboard offering real-time progress updates and status tracking",
       ],
-      technologies: ["Figma", "Java", "React", "Github"],
+      technologies: ["React", "Node.js", "Express", "TypeScript"],
       techColors: [
-        "bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200",
-        "bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200",
         "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200",
-        "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200",
+        "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200",
+        "bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200",
+        "bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200",
       ],
-      glowColor: "green" as const,
+      glowColor: "blue" as const,
     },
     {
       title: "ResumeHacker AI: Intelligent Resume Optimization Platform",
@@ -100,14 +100,11 @@ const ProjectsSection = () => {
   ];
 
   const handleProjectAction = (action: string, project: any) => {
-    if (project.title.includes("Pro Planet")) {
+    if (project.title.includes("Workflow Pro")) {
       if (action === "View Code") {
-        window.open("https://github.com/Ajay2760/CryptoTracker", "_blank");
+        window.open("https://github.com/Ajay2760/Workflow-Pro", "_blank");
       } else if (action === "Live Demo") {
-        window.open(
-          "https://carbonfootprintcalculator0.netlify.app/",
-          "_blank"
-        );
+        window.open("https://workflow-pro-app.onrender.com/", "_blank");
       }
     } else if (project.title.includes("ResumeHacker AI")) {
       if (action === "View Code") {

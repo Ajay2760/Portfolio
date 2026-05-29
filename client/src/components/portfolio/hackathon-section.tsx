@@ -54,19 +54,28 @@ const HackathonSection = () => {
       demo: "https://fraud-detection-suite--zeusgamer0157.replit.app/"
     },
     {
-      type: "event",
-      title: "Smart India Hackathon 2023",
-      subtitle: "24-Hour National-Level Institute Hackathon",
-      location: "Sri Venkateswara College of Engineering, Sriperumbudur",
+      type: "project",
+      title: "Pro Planet — Carbon Footprint Calculator",
+      subtitle: "Smart India Hackathon 2023 (SVCE Chennai)",
       description:
-        "Collaborated in a high-intensity, 24-hour national hackathon initiative, working alongside a multidisciplinary team to design, prototype, and pitch innovative software solutions for pressing real-world challenges.",
-      outcomes: [
-        "Brainstormed and developed a full working prototype within the strict 24-hour timeframe.",
-        "Gained key insights into rapid application development, collaborative team coordination, and agile pivoting.",
-        "Presented and pitched the solution to panel judges, refining product messaging and presentation skills.",
+        "Developed a comprehensive sustainability platform and mobile application prototype during the 24-hour national hackathon, designed to calculate, track, and reduce users' daily carbon emissions based on habits.",
+      image: "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      features: [
+        "Collaborated in a high-intensity, 24-hour national hackathon initiative, leading frontend prototyping and logic development.",
+        "Designed personalized carbon footprint tracking based on daily habits and lifestyle choices.",
+        "Implemented AI-powered reduction recommendations to suggest actionable sustainability steps.",
+        "Built an intuitive, mobile-responsive prototype with interactive user interface elements.",
       ],
-      technologies: ["React", "Node.js", "Rapid Prototyping", "Team Collaboration"],
-      glowColor: "orange" as const,
+      technologies: ["React", "Java", "Figma", "Team Collaboration"],
+      techColors: [
+        "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200",
+        "bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200",
+        "bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200",
+        "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200",
+      ],
+      glowColor: "green" as const,
+      github: "https://github.com/Ajay2760/Carbon-footprint-calculator",
+      demo: "https://carbonfootprintcalculator0.netlify.app/"
     }
   ];
 
@@ -101,11 +110,16 @@ const HackathonSection = () => {
                       />
                     )}
                     <div className="p-8 flex flex-col flex-grow space-y-4">
-                      <div className="flex flex-wrap items-center justify-between gap-2">
-                        <h3 className="text-xl font-bold">{item.title}</h3>
-                        <Badge className="bg-gradient-to-r from-red-500 to-rose-600 text-white text-xs">
-                          Hackathon Project
-                        </Badge>
+                      <div className="flex flex-col gap-1">
+                        <div className="flex flex-wrap items-center justify-between gap-2">
+                          <h3 className="text-xl font-bold">{item.title}</h3>
+                          <Badge className="bg-gradient-to-r from-red-500 to-rose-600 text-white text-xs">
+                            Hackathon Project
+                          </Badge>
+                        </div>
+                        {item.subtitle && (
+                          <p className="text-xs text-primary font-medium">{item.subtitle}</p>
+                        )}
                       </div>
 
                       <p className="text-muted-foreground text-sm leading-relaxed">
