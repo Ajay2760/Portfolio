@@ -6,11 +6,11 @@ import { Github, ExternalLink } from "lucide-react";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Workflow Pro",
+      title: "Workflow Pro: Intelligent State-Management Engine for Secure Process Automation",
       description:
         "Workflow Pro is a secure workflow engine demonstrating advanced state management and API design, allowing Users, Managers, and Admins to seamlessly create, track, and process requests.",
       image:
-        "/assets/workflow-pro.jpg",
+        "https://i.postimg.cc/T3r9cDcG/Computer-Of-A-Programmer-With-Lines-Code-Of-Software-Photo-And-Picture-For-Free-Download-Pngtree.jpg",
       features: [
         "Role-Based Access Control (RBAC) allowing Users, Managers, and Admins to interact securely",
         "Advanced state machine for creation, tracking, and seamless processing of workflow requests",
