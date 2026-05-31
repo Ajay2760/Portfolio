@@ -20,10 +20,10 @@ export function GenerativeArtScene() {
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(currentMount.clientWidth, currentMount.clientHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     currentMount.appendChild(renderer.domElement);
 
-    const geometry = new THREE.IcosahedronGeometry(1.2, 64);
+    const geometry = new THREE.IcosahedronGeometry(1.2, 20);
     const material = new THREE.ShaderMaterial({
       uniforms: {
         time: { value: 0 },
@@ -117,7 +117,9 @@ export function GenerativeArtScene() {
     lightRef.current = pointLight;
     scene.add(pointLight);
 
-    let frameId: number;
+    let isVisible = false;
+    let frameId: number | null = null;
+
     const animate = (t: number) => {
       material.uniforms.time.value = t * 0.0003;
       mesh.rotation.y += 0.0005;
@@ -125,7 +127,33 @@ export function GenerativeArtScene() {
       renderer.render(scene, camera);
       frameId = requestAnimationFrame(animate);
     };
-    frameId = requestAnimationFrame(animate);
+
+    const startAnimation = () => {
+      if (frameId === null) {
+        frameId = requestAnimationFrame(animate);
+      }
+    };
+
+    const stopAnimation = () => {
+      if (frameId !== null) {
+        cancelAnimationFrame(frameId);
+        frameId = null;
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+        if (isVisible) {
+          startAnimation();
+        } else {
+          stopAnimation();
+        }
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(currentMount);
 
     const handleResize = () => {
       if (!currentMount) return;
@@ -135,6 +163,7 @@ export function GenerativeArtScene() {
     };
 
     const handleMouseMove = (e: MouseEvent) => {
+      if (!isVisible) return;
       const x = (e.clientX / window.innerWidth) * 2 - 1;
       const y = -(e.clientY / window.innerHeight) * 2 + 1;
       const vec = new THREE.Vector3(x, y, 0.5).unproject(camera);
@@ -151,12 +180,15 @@ export function GenerativeArtScene() {
     window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      cancelAnimationFrame(frameId);
+      stopAnimation();
+      observer.disconnect();
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("mousemove", handleMouseMove);
       if (currentMount.contains(renderer.domElement)) {
         currentMount.removeChild(renderer.domElement);
       }
+      geometry.dispose();
+      material.dispose();
       renderer.dispose();
     };
   }, []);
