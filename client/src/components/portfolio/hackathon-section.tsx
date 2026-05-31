@@ -7,9 +7,9 @@ const HackathonSection = () => {
   const hackathons = [
     {
       type: "project",
-      title: "ClearGlass — AI-Powered Fraud Detection Platform",
+      title: "ClearGlass: AI-Powered Fraud Detection Platform",
       description:
-        "A full-stack financial fraud intelligence platform built with React, Node.js, and PostgreSQL — featuring real-time transaction monitoring, explainable AI, and synthetic data generation.",
+        "A full-stack financial fraud intelligence platform built with React, Node.js, and PostgreSQL featuring real-time transaction monitoring, explainable AI, and synthetic data generation.",
       image: "https://i.postimg.cc/nhVrt7dj/Ransomware-Actors-Leverage-Microsoft-Tools-to-Breach-Organizations-Deploy-Black-Basta.jpg",
       features: [
         "SOC-style dashboard — dark UI with live KPIs: fraud rate, total amount at risk, and active alert count.",
@@ -50,12 +50,13 @@ const HackathonSection = () => {
         "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200",
       ],
       glowColor: "red" as const,
+      badgeText: "Complyance Hackathon",
       github: "https://github.com/Ajay2760/Clear-Glass--Fraud-Detection-Suite",
       demo: "https://fraud-detection-suite--zeusgamer0157.replit.app/"
     },
     {
       type: "project",
-      title: "Pro Planet — Carbon Footprint Calculator",
+      title: "Pro Planet: Carbon Footprint Calculator",
       subtitle: "Smart India Hackathon 2023 (SVCE Chennai)",
       description:
         "Developed a comprehensive sustainability platform and mobile application prototype during the 24-hour national hackathon, designed to calculate, track, and reduce users' daily carbon emissions based on habits.",
@@ -74,6 +75,7 @@ const HackathonSection = () => {
         "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200",
       ],
       glowColor: "green" as const,
+      badgeText: "SIH Hackathon 2023",
       github: "https://github.com/Ajay2760/Carbon-footprint-calculator",
       demo: "https://carbonfootprintcalculator0.netlify.app/"
     }
@@ -114,7 +116,7 @@ const HackathonSection = () => {
                         <div className="flex flex-wrap items-center justify-between gap-2">
                           <h3 className="text-xl font-bold">{item.title}</h3>
                           <Badge className="bg-gradient-to-r from-red-500 to-rose-600 text-white text-xs">
-                            Hackathon Project
+                            {item.badgeText || "Hackathon Project"}
                           </Badge>
                         </div>
                         {item.subtitle && (
