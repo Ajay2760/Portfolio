@@ -4,7 +4,7 @@ import { CheckCircle, Wrench, Lightbulb } from "lucide-react";
 
 const ExperienceSection = () => {
   const mainExperience = {
-    title: "Machine Learning Intern",
+    title: "Machine Learning Internship",
     company: "RETECH Solutions Pvt Ltd",
     location: "Chennai, India",
     year: "2023",
@@ -42,7 +42,7 @@ const ExperienceSection = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience</h2>
             <div className="w-24 h-1 bg-primary mx-auto"></div>
           </div>
-          
+
           <div className="space-y-8">
             {/* Main Internship */}
             <Card className="bg-muted/30 shadow-lg">
