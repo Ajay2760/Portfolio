@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { GlowCard } from "@/components/ui/spotlight-card";
+import BorderGlow from "@/components/ui/BorderGlow";
 import { Github, ExternalLink } from "lucide-react";
 
 const DesignPortfolioSection = () => {
@@ -16,7 +16,7 @@ const DesignPortfolioSection = () => {
             <div className="w-24 h-1 bg-primary mx-auto mt-4"></div>
           </div>
 
-          <GlowCard glowColor="purple" customSize={true} className="bg-card">
+          <BorderGlow theme="purple" className="w-full">
             <img
               src="https://i.postimg.cc/5t4hFWPR/colorful-night-in-the-mountains-digital-art-7680x4320-xtrafondos-com.jpg&auto=format&fit=crop&w=800&h=400"
               alt="Design Portfolio"
@@ -71,7 +71,7 @@ const DesignPortfolioSection = () => {
                 </Button>
               </div>
             </div>
-          </GlowCard>
+          </BorderGlow>
         </div>
       </div>
     </section>

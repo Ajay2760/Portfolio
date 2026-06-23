@@ -1,4 +1,4 @@
-import { GlowCard } from "@/components/ui/spotlight-card";
+import BorderGlow from "@/components/ui/BorderGlow";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from "lucide-react";
@@ -142,11 +142,10 @@ const ProjectsSection = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <GlowCard
+              <BorderGlow
                 key={index}
-                glowColor={project.glowColor}
-                customSize={true}
-                className="bg-card"
+                theme={project.glowColor}
+                className="w-full"
               >
                 <img
                   src={project.image}
@@ -169,10 +168,10 @@ const ProjectsSection = () => {
                     </ul>
                   </div>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech, techIndex) => (
+                    {project.technologies.map((tech, techIdx) => (
                       <Badge
-                        key={techIndex}
-                        className={project.techColors[techIndex]}
+                        key={techIdx}
+                        className={project.techColors[techIdx]}
                       >
                         {tech}
                       </Badge>
@@ -199,7 +198,7 @@ const ProjectsSection = () => {
                     </Button>
                   </div>
                 </div>
-              </GlowCard>
+              </BorderGlow>
             ))}
           </div>
         </div>

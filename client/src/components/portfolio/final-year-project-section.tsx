@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { GlowCard } from "@/components/ui/spotlight-card";
+import BorderGlow from "@/components/ui/BorderGlow";
 import { ExternalLink, FileText, Cpu } from "lucide-react";
 
 const FinalYearProjectSection = () => {
@@ -15,7 +15,7 @@ const FinalYearProjectSection = () => {
             <div className="w-24 h-1 bg-primary mx-auto"></div>
           </div>
 
-          <GlowCard glowColor="blue" customSize={true} className="bg-card">
+          <BorderGlow theme="blue" className="w-full">
             <img
               src="https://images.unsplash.com/photo-1761069183787-0272d2739ae6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Cotton Plant Disease Detection and Classification Using Cloud Computing"
@@ -94,7 +94,7 @@ const FinalYearProjectSection = () => {
                 </Button>
               </div>
             </div>
-          </GlowCard>
+          </BorderGlow>
         </div>
       </div>
     </section>

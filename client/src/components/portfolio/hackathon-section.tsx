@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { GlowCard } from "@/components/ui/spotlight-card";
+import BorderGlow from "@/components/ui/BorderGlow";
 import { Trophy, Users, Clock, MapPin, Award, Github, ExternalLink } from "lucide-react";
 
 const HackathonSection = () => {
@@ -98,11 +98,10 @@ const HackathonSection = () => {
             {hackathons.map((item, index) => {
               if (item.type === "project") {
                 return (
-                  <GlowCard
+                  <BorderGlow
                     key={index}
-                    glowColor={item.glowColor}
-                    customSize={true}
-                    className="bg-muted/30 flex flex-col h-full"
+                    theme={item.glowColor}
+                    className="flex flex-col h-full w-full"
                   >
                     {item.image && (
                       <img
@@ -178,15 +177,14 @@ const HackathonSection = () => {
                         )}
                       </div>
                     </div>
-                  </GlowCard>
+                  </BorderGlow>
                 );
               } else {
                 return (
-                  <GlowCard
+                  <BorderGlow
                     key={index}
-                    glowColor={item.glowColor}
-                    customSize={true}
-                    className="bg-muted/30 flex flex-col h-full"
+                    theme={item.glowColor}
+                    className="flex flex-col h-full w-full"
                   >
                     <div className="p-8 flex flex-col flex-grow space-y-6">
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -258,7 +256,7 @@ const HackathonSection = () => {
                         </div>
                       </div>
                     </div>
-                  </GlowCard>
+                  </BorderGlow>
                 );
               }
             })}
