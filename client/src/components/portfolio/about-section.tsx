@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { LocationTag } from "@/components/ui/location-tag";
-import ProfileCard from "@/components/ui/ProfileCard";
+import ProfileCard from "@/components/ui/profile-card";
 
 const AboutSection = () => {
   const details = [
@@ -24,13 +24,9 @@ const AboutSection = () => {
                 name="Ajay R"
                 title="Web Developer"
                 handle="ajayr"
-                status="Available for work"
-                contactText="Contact Me"
                 avatarUrl="https://i.postimg.cc/XNP7ncGM/Whats-App-Image-2026-05-15-at-12-34-49-PM.jpg"
-                showUserInfo={true}
-                enableTilt={true}
-                enableMobileTilt={false}
-                behindGlowEnabled={true}
+                contactText="Contact Me"
+                className="w-full flex items-center justify-center"
                 onContactClick={() => {
                   const contactSection = document.getElementById("contact");
                   if (contactSection) {
