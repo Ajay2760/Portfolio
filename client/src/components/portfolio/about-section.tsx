@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { LocationTag } from "@/components/ui/location-tag";
+import ProfileCard from "@/components/ui/ProfileCard";
 
 const AboutSection = () => {
   const details = [
@@ -18,11 +19,24 @@ const AboutSection = () => {
             <div className="w-24 h-1 bg-primary mx-auto"></div>
           </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <img
-                src="https://i.postimg.cc/XNP7ncGM/Whats-App-Image-2026-05-15-at-12-34-49-PM.jpg"
-                alt="Ajay R - Professional Developer"
-                className="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
+            <div className="flex justify-center items-center w-full max-w-md mx-auto">
+              <ProfileCard
+                name="Ajay R"
+                title="Web Developer"
+                handle="ajayr"
+                status="Available for work"
+                contactText="Contact Me"
+                avatarUrl="https://i.postimg.cc/XNP7ncGM/Whats-App-Image-2026-05-15-at-12-34-49-PM.jpg"
+                showUserInfo={true}
+                enableTilt={true}
+                enableMobileTilt={false}
+                behindGlowEnabled={true}
+                onContactClick={() => {
+                  const contactSection = document.getElementById("contact");
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
               />
             </div>
             <div>

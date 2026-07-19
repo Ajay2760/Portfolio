@@ -2,9 +2,26 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import BorderGlow from "@/components/ui/BorderGlow";
 import { Trophy, Users, Clock, MapPin, Award, Github, ExternalLink } from "lucide-react";
+import { GlowTheme } from "@/lib/card-colors";
 
 const HackathonSection = () => {
-  const hackathons = [
+  interface HackathonItem {
+    type: string;
+    title: string;
+    subtitle?: string;
+    description: string;
+    image?: string;
+    features?: string[];
+    technologies: string[];
+    techColors?: string[];
+    glowColor: GlowTheme;
+    badgeText?: string;
+    github?: string;
+    demo?: string;
+    outcomes?: string[];
+  }
+
+  const hackathons: HackathonItem[] = [
     {
       type: "project",
       title: "ClearGlass: AI-Powered Fraud Detection Platform",
