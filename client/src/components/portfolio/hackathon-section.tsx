@@ -69,7 +69,7 @@ const HackathonSection = () => {
       glowColor: "red" as const,
       badgeText: "Complyance Hackathon",
       github: "https://github.com/Ajay2760/Clear-Glass--Fraud-Detection-Suite",
-      demo: "https://fraud-detection-suite--zeusgamer0157.replit.app/"
+      demo: "https://clearglassfraud.netlify.app/"
     },
     {
       type: "project",
