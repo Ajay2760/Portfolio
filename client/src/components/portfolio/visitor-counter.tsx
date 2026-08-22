@@ -12,25 +12,40 @@ export default function VisitorCounter() {
     async function trackAndFetchViews() {
       try {
         const hasVisited = sessionStorage.getItem("visited_profile");
+        const endpoint = !hasVisited
+          ? "https://countapi.mileshilliard.com/api/v1/hit/ajay2760_portfolio_views"
+          : "https://countapi.mileshilliard.com/api/v1/get/ajay2760_portfolio_views";
 
         if (!hasVisited) {
           sessionStorage.setItem("visited_profile", "true");
-          const res = await apiRequest("POST", "/api/views/increment");
+        }
+
+        const res = await fetch(endpoint);
+        if (res.ok) {
           const data = await res.json();
-          if (isMounted && data.views !== undefined) {
-            setViews(data.views);
+          const count = data.value ?? data.views;
+          if (isMounted && typeof count === "number") {
+            setViews(count);
+            return;
           }
-        } else {
-          const res = await fetch("/api/views");
-          const data = await res.json();
-          if (isMounted && data.views !== undefined) {
-            setViews(data.views);
+        }
+
+        // Fallback to local express route if countapi is unreachable
+        const fallbackEndpoint = !hasVisited ? "/api/views/increment" : "/api/views";
+        const localRes = !hasVisited
+          ? await apiRequest("POST", fallbackEndpoint)
+          : await fetch(fallbackEndpoint);
+        
+        if (localRes.ok) {
+          const localData = await localRes.json();
+          if (isMounted && typeof localData.views === "number") {
+            setViews(localData.views);
           }
         }
       } catch (err) {
         console.error("Failed to track visitor views:", err);
         if (isMounted && views === null) {
-          setViews(1); // fallback default starting count
+          setViews(1);
         }
       } finally {
         if (isMounted) {
