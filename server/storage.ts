@@ -6,17 +6,21 @@ export interface IStorage {
   createUser(user: InsertUser): Promise<User>;
   createContact(contact: InsertContact): Promise<Contact>;
   getContacts(): Promise<Contact[]>;
+  getProfileViews(): Promise<number>;
+  incrementProfileViews(): Promise<number>;
 }
 
 export class MemStorage implements IStorage {
   private users: Map<number, User>;
   private contacts: Map<number, Contact>;
+  private profileViews: number;
   private currentUserId: number;
   private currentContactId: number;
 
   constructor() {
     this.users = new Map();
     this.contacts = new Map();
+    this.profileViews = 1;
     this.currentUserId = 1;
     this.currentContactId = 1;
   }
@@ -53,6 +57,15 @@ export class MemStorage implements IStorage {
     return Array.from(this.contacts.values()).sort(
       (a, b) => b.createdAt.getTime() - a.createdAt.getTime()
     );
+  }
+
+  async getProfileViews(): Promise<number> {
+    return this.profileViews;
+  }
+
+  async incrementProfileViews(): Promise<number> {
+    this.profileViews += 1;
+    return this.profileViews;
   }
 }
 

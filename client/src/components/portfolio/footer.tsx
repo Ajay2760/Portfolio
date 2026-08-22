@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Instagram } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
+import VisitorCounter from "@/components/portfolio/visitor-counter";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -80,11 +81,14 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border mt-8 pt-8 text-center">
-          <p className="text-sm text-muted-foreground">
+        <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-muted-foreground text-center md:text-left">
             &copy; {currentYear} Ajay R. All rights reserved by me. Built with
             passion and modern web technologies.
           </p>
+          <div className="flex justify-end w-full md:w-auto">
+            <VisitorCounter />
+          </div>
         </div>
       </div>
     </footer>

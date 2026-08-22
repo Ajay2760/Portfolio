@@ -40,6 +40,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Get profile views count
+  app.get("/api/views", async (_req, res) => {
+    try {
+      const views = await storage.getProfileViews();
+      res.json({ views });
+    } catch (error) {
+      res.status(500).json({ success: false, message: "Failed to fetch views" });
+    }
+  });
+
+  // Increment profile views count
+  app.post("/api/views/increment", async (_req, res) => {
+    try {
+      const views = await storage.incrementProfileViews();
+      res.json({ views });
+    } catch (error) {
+      res.status(500).json({ success: false, message: "Failed to increment views" });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
