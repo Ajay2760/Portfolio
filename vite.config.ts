@@ -24,6 +24,11 @@ export default defineConfig({
     },
   },
   root: path.resolve(import.meta.dirname, "client"),
+  // Vite's root is `client/`, so by default it would look for `client/public`
+  // (which does not exist). Point it at the project-level `public/` folder so
+  // favicon.svg and the assets in `public/assets` are served in dev and copied
+  // into the production build.
+  publicDir: path.resolve(import.meta.dirname, "public"),
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,

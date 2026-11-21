@@ -3,10 +3,19 @@ import { LocationTag } from "@/components/ui/location-tag";
 import ProfileCard from "@/components/ui/profile-card";
 
 const AboutSection = () => {
-  const details = [
+  const details: {
+    label: string;
+    value: string;
+    href?: string;
+    highlight?: boolean;
+  }[] = [
     { label: "Location", value: "Kanchipuram, India" },
-    { label: "Email", value: "ajaykpm0157@gmail.com" },
-    { label: "Phone", value: "+91 8940005533" },
+    {
+      label: "Email",
+      value: "ajaykpm0157@gmail.com",
+      href: "mailto:ajaykpm0157@gmail.com",
+    },
+    { label: "Phone", value: "+91 8940005533", href: "tel:+918940005533" },
     { label: "Status", value: "Available for work", highlight: true },
   ];
 
@@ -22,7 +31,7 @@ const AboutSection = () => {
             <div className="flex justify-center items-center w-full max-w-md mx-auto">
               <ProfileCard
                 name="Ajay R"
-                title="Web Developer"
+                title="Software Developer"
                 handle="ajayr"
                 avatarUrl="https://i.postimg.cc/XNP7ncGM/Whats-App-Image-2026-05-15-at-12-34-49-PM.jpg"
                 contactText="Contact Me"
@@ -41,7 +50,7 @@ const AboutSection = () => {
               </h3>
               <p className="text-lg mb-6 leading-relaxed text-muted-foreground">
                 With a Bachelor's degree in Information Technology and a strong
-                foundation in web development, I specialize in creating dynamic,
+                foundation in software development, I specialize in creating dynamic,
                 responsive applications that solve real-world problems. My
                 journey in tech has been driven by curiosity and a desire to
                 build meaningful digital experiences.
@@ -49,7 +58,7 @@ const AboutSection = () => {
               <p className="text-lg mb-8 leading-relaxed text-muted-foreground">
                 From face detection algorithms to real-time chat applications, I
                 enjoy tackling diverse challenges that push the boundaries of
-                what's possible with modern web technologies.
+                what's possible with modern technologies.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 {details.map((detail, index) => (
@@ -59,6 +68,13 @@ const AboutSection = () => {
                       <div className="-ml-4 sm:ml-0">
                         <LocationTag city="Kanchipuram" country="India" timezone="IST" />
                       </div>
+                    ) : detail.href ? (
+                      <a
+                        href={detail.href}
+                        className="text-muted-foreground hover:text-primary transition-colors break-all"
+                      >
+                        {detail.value}
+                      </a>
                     ) : (
                       <p
                         className={

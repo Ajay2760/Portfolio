@@ -21,7 +21,7 @@ const Footer = () => {
       Instagram: "https://www.instagram.com/_ajay._.17_",
     };
     if (socialUrls[platform]) {
-      window.open(socialUrls[platform], "_blank");
+      window.open(socialUrls[platform], "_blank", "noopener,noreferrer");
     }
   };
 
@@ -46,8 +46,8 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold text-foreground mb-4">Ajay R</h3>
             <p className="mb-4 text-muted-foreground">
-              Web Developer passionate about creating innovative web solutions
-              and learning new technologies.
+              Software Developer passionate about building innovative web and
+              mobile applications and learning new technologies.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -56,6 +56,8 @@ const Footer = () => {
                   variant="ghost"
                   size="icon"
                   onClick={() => handleSocialClick(social.label)}
+                  aria-label={social.label}
+                  title={social.label}
                   className="text-muted-foreground hover:text-foreground transition-colors p-1"
                 >
                   <social.icon className="h-5 w-5" />

@@ -4,16 +4,23 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import ButtonSocialIconDemo from "@/components/ui/social-icon";
 
 const ContactSection = () => {
-  const contactInfo = [
+  const contactInfo: {
+    icon: typeof Mail;
+    title: string;
+    value: string;
+    href?: string;
+  }[] = [
     {
       icon: Mail,
       title: "Email",
       value: "ajaykpm0157@gmail.com",
+      href: "mailto:ajaykpm0157@gmail.com",
     },
     {
       icon: Phone,
       title: "Phone",
       value: "+91 8940005533",
+      href: "tel:+918940005533",
     },
     {
       icon: MapPin,
@@ -55,7 +62,16 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <h4 className="font-medium">{info.title}</h4>
-                      <p className="text-muted-foreground">{info.value}</p>
+                      {info.href ? (
+                        <a
+                          href={info.href}
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          {info.value}
+                        </a>
+                      ) : (
+                        <p className="text-muted-foreground">{info.value}</p>
+                      )}
                     </div>
                   </div>
                 ))}

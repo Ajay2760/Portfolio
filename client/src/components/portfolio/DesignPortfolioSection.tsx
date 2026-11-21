@@ -1,7 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import BorderGlow from "@/components/ui/BorderGlow";
-import { Github, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { FaFigma } from "react-icons/fa";
 
 const DesignPortfolioSection = () => {
   return (
@@ -12,14 +13,14 @@ const DesignPortfolioSection = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               UI/UX Design Portfolio
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto"></p>
             <div className="w-24 h-1 bg-primary mx-auto mt-4"></div>
           </div>
 
           <BorderGlow theme="purple" className="w-full">
             <img
-              src="https://i.postimg.cc/5t4hFWPR/colorful-night-in-the-mountains-digital-art-7680x4320-xtrafondos-com.jpg&auto=format&fit=crop&w=800&h=400"
+              src="https://i.postimg.cc/5t4hFWPR/colorful-night-in-the-mountains-digital-art-7680x4320-xtrafondos-com.jpg"
               alt="Design Portfolio"
+              loading="lazy"
               className="w-full h-48 object-cover flex-shrink-0"
             />
             <div className="p-8">
@@ -49,11 +50,12 @@ const DesignPortfolioSection = () => {
                   onClick={() =>
                     window.open(
                       "https://www.figma.com/files/team/1283459112754983393/recents-and-sharing?fuid=1283459110526473319",
-                      "_blank"
+                      "_blank",
+                      "noopener,noreferrer"
                     )
                   }
                 >
-                  <Github className="mr-2 h-4 w-4" />
+                  <FaFigma className="mr-2 h-4 w-4" />
                   View Figma
                 </Button>
                 <Button
@@ -62,7 +64,8 @@ const DesignPortfolioSection = () => {
                   onClick={() =>
                     window.open(
                       "https://ajay-r-uiux-design-portfolio.super.site/",
-                      "_blank"
+                      "_blank",
+                      "noopener,noreferrer"
                     )
                   }
                 >

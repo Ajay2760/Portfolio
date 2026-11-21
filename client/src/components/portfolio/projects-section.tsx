@@ -59,7 +59,7 @@ const ProjectsSection = () => {
         "Dynamic charts showing incident trends and patterns",
         "Tag-based filtering with popular tag suggestions",
       ],
-      technologies: ["React", "Typescript", "Recharts", "GitHub"],
+      technologies: ["React", "TypeScript", "Recharts", "GitHub"],
       techColors: [
         "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200",
         "bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200",
@@ -73,7 +73,7 @@ const ProjectsSection = () => {
       description:
         "Developed a sleek and interactive crypto dashboard for MacV AI's frontend intern task. The platform offers real-time insights into top cryptocurrencies, allows users to track price trends, and manage a personalized watchlist all powered by the CoinGecko API.",
       image:
-        "https://i.postimg.cc/GtJ57GGK/erling-loken-andersen-af-The-PQEZs-M-unsplash-1.jpg&auto=format&fit=crop&w=800&h=400",
+        "https://i.postimg.cc/GtJ57GGK/erling-loken-andersen-af-The-PQEZs-M-unsplash-1.jpg",
       features: [
         "Paginated list of top 50 cryptocurrencies with real-time data",
         "Search and filter functionality for coin name, symbol, market cap, volume, and price change",
@@ -83,7 +83,7 @@ const ProjectsSection = () => {
       ],
       technologies: [
         "Next.js",
-        "Typescript",
+        "TypeScript",
         "Tailwind CSS",
         "Recharts",
         "CoinGecko API",
@@ -102,30 +102,31 @@ const ProjectsSection = () => {
   const handleProjectAction = (action: string, project: any) => {
     if (project.title.includes("Workflow Pro")) {
       if (action === "View Code") {
-        window.open("https://github.com/Ajay2760/Workflow-Pro", "_blank");
+        window.open("https://github.com/Ajay2760/Workflow-Pro", "_blank", "noopener,noreferrer");
       } else if (action === "Live Demo") {
-        window.open("https://workflow-pro-app.onrender.com/", "_blank");
+        window.open("https://workflow-pro-app.onrender.com/", "_blank", "noopener,noreferrer");
       }
     } else if (project.title.includes("ResumeHacker AI")) {
       if (action === "View Code") {
-        window.open("https://github.com/Ajay2760/ResumeHacker-AI", "_blank");
+        window.open("https://github.com/Ajay2760/ResumeHacker-AI", "_blank", "noopener,noreferrer");
       } else if (action === "Live Demo") {
-        window.open("https://resumeranker-ai-ewwk.onrender.com/", "_blank");
+        window.open("https://resumeranker-ai-ewwk.onrender.com/", "_blank", "noopener,noreferrer");
       }
     } else if (project.title.includes("SnapReport")) {
       if (action === "View Code") {
         window.open(
           "https://github.com/Ajay2760/SnapReport-Incident-Report-Manager",
-          "_blank"
+          "_blank",
+          "noopener,noreferrer"
         );
       } else if (action === "Live Demo") {
-        window.open("https://snapreport1.netlify.app/", "_blank");
+        window.open("https://snapreport1.netlify.app/", "_blank", "noopener,noreferrer");
       }
     } else if (project.title.includes("CryptoTracker")) {
       if (action === "View Code") {
-        window.open("https://github.com/Ajay2760/CryptoTracker.git", "_blank");
+        window.open("https://github.com/Ajay2760/CryptoTracker.git", "_blank", "noopener,noreferrer");
       } else if (action === "Live Demo") {
-        window.open("https://cryptotracker-sable.vercel.app/", "_blank");
+        window.open("https://cryptotracker-sable.vercel.app/", "_blank", "noopener,noreferrer");
       }
     }
   };
@@ -150,6 +151,7 @@ const ProjectsSection = () => {
                 <img
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
                   className="w-full h-48 object-cover flex-shrink-0"
                 />
                 <div className="p-8 flex flex-col flex-1">

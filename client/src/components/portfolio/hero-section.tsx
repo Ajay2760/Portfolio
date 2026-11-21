@@ -5,9 +5,19 @@ import { Mail, Download } from "lucide-react";
 
 const HeroSection = () => {
   const [displayText, setDisplayText] = useState("");
-  const fullText = "Web Developer & Tech Enthusiast";
+  const fullText = "Software Developer & Tech Enthusiast";
 
   useEffect(() => {
+    // Skip the typing effect for users who asked their OS to reduce motion.
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (prefersReducedMotion) {
+      setDisplayText(fullText);
+      return;
+    }
+
     let index = 0;
     const timer = setInterval(() => {
       setDisplayText(fullText.slice(0, index));
@@ -30,7 +40,7 @@ const HeroSection = () => {
   const handleDownloadResume = () => {
     const link = document.createElement("a");
     link.href =
-      "https://drive.google.com/file/d/1hIEjOU8VZgkwrfPnmivlm-ZxjUDhRqjm/view?usp=sharing";
+      "https://drive.google.com/uc?export=download&id=1hIEjOU8VZgkwrfPnmivlm-ZxjUDhRqjm";
     link.target = "_blank";
     link.rel = "noopener noreferrer";
     link.click();
@@ -57,10 +67,10 @@ const HeroSection = () => {
             <span className="typing-animation">{displayText}</span>
           </div>
           <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed text-muted-foreground">
-            Aspiring Web Developer with hands-on experience in building
-            responsive web applications using modern technologies. Passionate
-            about creating user-friendly experiences with performance and
-            scalability in mind.
+            Aspiring Software Developer with hands-on experience in building
+            responsive web and mobile applications using modern technologies.
+            Passionate about creating user-friendly experiences with performance
+            and scalability in mind.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

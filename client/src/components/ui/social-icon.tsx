@@ -17,7 +17,7 @@ const ButtonSocialIconDemo = () => {
           key={index}
           variant="outline"
           type="button"
-          onClick={() => window.open(social.href, "_blank")}
+          onClick={() => window.open(social.href, "_blank", "noopener,noreferrer")}
           aria-label={social.label}
           className="rounded-2xl hover:scale-110 transition-all duration-300 cursor-pointer h-14 w-14 p-0 dark:border-white/10 dark:hover:bg-white/5 bg-transparent"
         >

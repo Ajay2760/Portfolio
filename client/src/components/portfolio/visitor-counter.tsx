@@ -44,8 +44,8 @@ export default function VisitorCounter() {
         }
       } catch (err) {
         console.error("Failed to track visitor views:", err);
-        if (isMounted && views === null) {
-          setViews(1);
+        if (isMounted) {
+          setViews((prev) => prev ?? 1);
         }
       } finally {
         if (isMounted) {
@@ -64,7 +64,7 @@ export default function VisitorCounter() {
   return (
     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-primary/30 bg-primary/10 hover:bg-primary/20 text-foreground text-xs md:text-sm font-medium transition-all shadow-sm select-none">
       <Users className="w-4 h-4 text-primary animate-pulse" />
-      <span>Visitor:</span>
+      <span>Visitors:</span>
       <span className="font-bold text-primary font-mono">
         {isLoading ? "..." : (views ?? 1)}
       </span>

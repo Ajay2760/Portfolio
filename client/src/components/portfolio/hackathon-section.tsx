@@ -99,7 +99,7 @@ const HackathonSection = () => {
   ];
 
   const handleAction = (url: string) => {
-    window.open(url, "_blank");
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -124,6 +124,7 @@ const HackathonSection = () => {
                       <img
                         src={item.image}
                         alt={item.title}
+                        loading="lazy"
                         className="w-full h-52 object-cover flex-shrink-0"
                       />
                     )}

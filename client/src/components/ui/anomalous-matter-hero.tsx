@@ -129,6 +129,11 @@ export function GenerativeArtScene() {
     };
 
     const startAnimation = () => {
+      // Reduced motion: draw one static frame instead of looping forever.
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        renderer.render(scene, camera);
+        return;
+      }
       if (frameId === null) {
         frameId = requestAnimationFrame(animate);
       }

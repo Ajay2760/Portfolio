@@ -18,6 +18,7 @@ const FinalYearProjectSection = () => {
           <BorderGlow theme="blue" className="w-full">
             <img
               src="https://images.unsplash.com/photo-1761069183787-0272d2739ae6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              loading="lazy"
               alt="Cotton Plant Disease Detection and Classification Using Cloud Computing"
               className="w-full h-64 object-cover flex-shrink-0"
             />
@@ -85,7 +86,8 @@ const FinalYearProjectSection = () => {
                   onClick={() =>
                     window.open(
                       "https://drive.google.com/file/d/1NIMOl6Ih6zuFwggQTsyoQ7U3wanwACMQ/view?usp=sharing",
-                      "_blank"
+                      "_blank",
+                      "noopener,noreferrer"
                     )
                   }
                 >

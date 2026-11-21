@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { Code, Server, Database, Wrench, Cloud } from "lucide-react";
+import { Code, Server, Database, Wrench, Cloud, Smartphone } from "lucide-react";
 
 const SkillsSection = () => {
   const skillCategories = [
@@ -20,9 +20,20 @@ const SkillsSection = () => {
       icon: Server,
       color: "text-accent",
       skills: [
+        { name: "Laravel", level: 80 },
         { name: "Node.js", level: 75 },
         { name: "Java", level: 85 },
         { name: "Spring Boot", level: 70 },
+      ]
+    },
+    {
+      title: "Mobile & App Development",
+      icon: Smartphone,
+      color: "text-cyan-500",
+      skills: [
+        { name: "Flutter", level: 85 },
+        { name: "App Development", level: 85 },
+        { name: "Firebase", level: 80 },
       ]
     },
     {
@@ -32,6 +43,7 @@ const SkillsSection = () => {
       skills: [
         { name: "MongoDB", level: 75 },
         { name: "MySQL", level: 80 },
+        { name: "XAMPP", level: 80 },
         { name: "Git/GitHub", level: 85 },
       ]
     },
@@ -70,7 +82,7 @@ const SkillsSection = () => {
             <div className="w-24 h-1 bg-primary mx-auto"></div>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {skillCategories.map((category, index) => (
               <Card key={index} className="bg-muted/30 shadow-lg">
                 <CardContent className="p-6">
@@ -95,7 +107,7 @@ const SkillsSection = () => {
           </div>
 
           {/* Additional Skills */}
-          <div className="mt-12 grid md:grid-cols-2 gap-8">
+          <div className="mt-12 grid sm:grid-cols-2 md:grid-cols-3 gap-8">
             {additionalSkills.map((category, index) => (
               <Card key={index} className="bg-muted/30 shadow-lg">
                 <CardContent className="p-6">

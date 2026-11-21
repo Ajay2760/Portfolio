@@ -2,35 +2,73 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1"
-    />
-    <title>Ajay R - Web Developer Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajay R - Software Developer Portfolio</title>
     <meta
       name="description"
-      content="Ajay R - Aspiring Web Developer with expertise in React, Node.js, and modern web technologies. View my projects and experience."
+      content="Ajay R - Software Developer with hands-on experience in Laravel, Flutter, Firebase, React, and Node.js. View my projects and experience."
     />
     <meta
       name="keywords"
-      content="web developer, full stack developer, react developer, portfolio, ajay r"
+      content="software developer, laravel developer, flutter developer, firebase, app development, full stack developer, react developer, portfolio, ajay r"
     />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Browser chrome colour, per colour scheme -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0a0a" />
+
+    <!-- Social preview (LinkedIn / WhatsApp / X / Discord) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ajay R" />
+    <meta property="og:title" content="Ajay R - Software Developer" />
+    <meta
+      property="og:description"
+      content="Software Developer building web and mobile apps with Laravel, Flutter, Firebase, React, and Node.js."
+    />
+    <meta
+      property="og:image"
+      content="https://i.postimg.cc/XNP7ncGM/Whats-App-Image-2026-05-15-at-12-34-49-PM.jpg"
+    />
+    <meta property="og:image:alt" content="Portrait of Ajay R" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ajay R - Software Developer" />
+    <meta
+      name="twitter:description"
+      content="Software Developer building web and mobile apps with Laravel, Flutter, Firebase, React, and Node.js."
+    />
+    <meta
+      name="twitter:image"
+      content="https://i.postimg.cc/XNP7ncGM/Whats-App-Image-2026-05-15-at-12-34-49-PM.jpg"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+
+    <!-- Apply the stored/OS theme before first paint so dark-mode users see no flash -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("portfolio-theme");
+          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var dark =
+            stored === "dark" ||
+            ((stored === null || stored === "system") && prefersDark);
+          document.documentElement.classList.add(dark ? "dark" : "light");
+        } catch (e) {
+          document.documentElement.classList.add("light");
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
-    <script
-      type="text/javascript"
-      src="https://replit.com/public/js/replit-dev-banner.js"
-    ></script>
   </body>
 </html>
